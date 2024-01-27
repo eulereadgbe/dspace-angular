@@ -167,20 +167,21 @@ export class MetadataService {
       this.setCitationDissertationNameTag();
     }
 
-    // this.setCitationJournalTitleTag();
-    // this.setCitationVolumeTag();
-    // this.setCitationIssueTag();
-    // this.setCitationFirstPageTag();
-    // this.setCitationLastPageTag();
-    // this.setCitationDOITag();
+    this.setCitationJournalTitleTag();
+    this.setCitationBookTitleTag();
+    this.setCitationVolumeTag();
+    this.setCitationIssueTag();
+    this.setCitationFirstPageTag();
+    this.setCitationLastPageTag();
+    this.setCitationDOITag();
     // this.setCitationPMIDTag();
 
     // this.setCitationFullTextTag();
 
-    // this.setCitationConferenceTag();
+    this.setCitationConferenceTag();
 
-    // this.setCitationPatentCountryTag();
-    // this.setCitationPatentNumberTag();
+    this.setCitationPatentCountryTag();
+    this.setCitationPatentNumberTag();
 
   }
 
@@ -272,12 +273,62 @@ export class MetadataService {
     }
   }
 
+  private setCitationJournalTitleTag(): void {
+    const value = this.getMetaTagValue('dc.citation.journaltitle');
+    this.addMetaTag('citation_journal_title', value);
+  }
+
+  private setCitationBookTitleTag(): void {
+    const value = this.getMetaTagValue('dc.citation.booktitle');
+    this.addMetaTag('citation_inbook_title', value);
+  }
+
+  private setCitationVolumeTag(): void {
+    const value = this.getMetaTagValue('dc.citation.volume');
+    this.addMetaTag('citation_volume', value);
+  }
+
+  private setCitationIssueTag(): void {
+    const value = this.getMetaTagValue('dc.citation.issue');
+    this.addMetaTag('citation_issue', value);
+  }
+
+  private setCitationFirstPageTag(): void {
+    const value = this.getMetaTagValue('dc.citation.firstpage');
+    this.addMetaTag('citation_firstpage', value);
+  }
+
+  private setCitationLastPageTag(): void {
+    const value = this.getMetaTagValue('dc.citation.lastpage');
+    this.addMetaTag('citation_lastpage', value);
+  }
+
+  private setCitationDOITag(): void {
+    const value = this.getMetaTagValue('dc.identifier.doi');
+    this.addMetaTag('citation_doi', value);
+  }
+
+  private setCitationConferenceTag(): void {
+    const value = this.getMetaTagValue('dc.citation.conferencetitle');
+    this.addMetaTag('citation_conference', value);
+  }
+
+  private setCitationPatentCountryTag(): void {
+    const value = this.getMetaTagValue('dc.citation.patentCountry');
+    this.addMetaTag('citation_patent_country', value);
+  }
+
+  private setCitationPatentNumberTag(): void {
+    const value = this.getMetaTagValue('dc.identifier.patentnumber');
+    this.addMetaTag('citation_patent_number', value);
+  }
+
   /**
    * Add <meta name="citation_keywords" ... >  to the <head>
    */
   private setCitationKeywordsTag(): void {
-    const value = this.getMetaTagValuesAndCombine('dc.subject');
-    this.addMetaTag('citation_keywords', value);
+    const values: string = this.getMetaTagValuesAndCombine(['*.subject*', 'dc.coverage.spatial','dc.type']);
+    this.addMetaTag('citation_keywords', values);
   }
 
   /**
@@ -460,8 +511,8 @@ export class MetadataService {
     return this.currentObject.value.firstMetadataValue(keys);
   }
 
-  private getMetaTagValuesAndCombine(key: string): string {
-    return this.getMetaTagValues([key]).join('; ');
+  private getMetaTagValuesAndCombine(keys: string[]): string {
+    return this.getMetaTagValues(keys).join('; ');
   }
 
   private getMetaTagValues(keys: string[]): string[] {
