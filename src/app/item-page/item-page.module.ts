@@ -60,6 +60,13 @@ import { ThemedItemAlertsComponent } from './alerts/themed-item-alerts.component
 import {
   ThemedFullFileSectionComponent
 } from './full/field-components/file-section/themed-full-file-section.component';
+import { ItemPageAltmetricFieldComponent } from './simple/field-components/specific-field/metrics/altmetric/item-page-altmetric-field.component';
+import { AltmetricDirective } from './simple/field-components/specific-field/metrics/altmetric/item-page-altmetric-field.directive';
+import { ItemPageDimensionsFieldComponent } from './simple/field-components/specific-field/metrics/dimensions/item-page-dimensions-field.component';
+import { DimensionsDirective } from './simple/field-components/specific-field/metrics/dimensions/item-page-dimensions-field.directive';
+import { ItemPagePlumxFieldComponent } from './simple/field-components/specific-field/metrics/plumx/item-page-plumx-field.component';
+import { PlumxDirective } from './simple/field-components/specific-field/metrics/plumx/item-page-plumx-field.directive';
+import { ItemPageMetricsFieldComponent } from './simple/field-components/specific-field/metrics/item-page-metrics-field.component';
 
 const ENTRY_COMPONENTS = [
   // put only entry components that use custom decorator
@@ -103,6 +110,16 @@ const DECLARATIONS = [
   ItemAlertsComponent,
   ThemedItemAlertsComponent,
   BitstreamRequestACopyPageComponent,
+  ItemPageMetricsFieldComponent,
+  ItemPageAltmetricFieldComponent,
+  ItemPageDimensionsFieldComponent,
+  ItemPagePlumxFieldComponent,
+];
+
+const DIRECTIVES = [
+  AltmetricDirective,
+  DimensionsDirective,
+  PlumxDirective,
 ];
 
 @NgModule({
@@ -124,10 +141,11 @@ const DECLARATIONS = [
   ],
   declarations: [
     ...DECLARATIONS,
-
+    ...DIRECTIVES,
   ],
   exports: [
     ...DECLARATIONS,
+    ...DIRECTIVES,
   ]
 })
 export class ItemPageModule {

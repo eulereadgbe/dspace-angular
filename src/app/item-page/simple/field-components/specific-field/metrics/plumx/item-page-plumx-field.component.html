@@ -1,0 +1,23 @@
+<div class="simple-view-element-body" style="margin-top: 10px;">
+  <ng-container [ngTemplateOutlet]="plumxWidgetDoi"
+                [ngTemplateOutletContext]="{
+                                                itemDoi: item?.firstMetadataValue('dc.identifier.doi'),
+                                              }"
+                *ngIf="item?.firstMetadataValue('dc.identifier.doi')">
+  </ng-container>
+  <!-- This should be safe because all DSpace items have a handle -->
+  <ng-container [ngTemplateOutlet]="plumxWidgetHandle"
+                [ngTemplateOutletContext]="{
+                                                itemHandle: item?.firstMetadataValue('dc.identifier.uri'),
+                                              }"
+                *ngIf="!item?.firstMetadataValue('dc.identifier.doi')">
+  </ng-container>
+</div>
+<!-- See: https://plu.mx/plum/developers/widgets -->
+<ng-template #plumxWidgetDoi let-itemDoi="itemDoi">
+  <a href="https://plu.mx/plum/a/?doi={{itemDoi}}" class="plumx-details" data-hide-print="true" data-hide-when-empty="true"></a>
+</ng-template>
+
+<ng-template #plumxWidgetHandle let-itemHandle="itemHandle">
+  <a href="https://plu.mx/plum/a/?repo_url={{itemHandle}}" class="plumx-details" data-hide-print="true" data-hide-when-empty="true"></a>
+</ng-template>
