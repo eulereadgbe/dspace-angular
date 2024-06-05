@@ -3,5 +3,17 @@
   "item.page.external-url": "Associated content",
   "item.page.subject-agrovoc": "AGROVOC Keywords",
   "item.page.subject-scientificname": "Taxonomic Terms",
-  "item.page.geographic-name": "Geographic Names"
+  "item.page.geographic-name": "Geographic Names",
+  "search.filters.filter.subject.head": "AGROVOC Keyword",
+  "search.filters.filter.subject.label": "Search AGROVOC Keyword",
+  "search.filters.filter.subject.placeholder": "AGROVOC Keyword",
+  "search.filters.applied.f.subject": "AGROVOC Keyword",
+  "search.filters.filter.scientificname.head": "Scientific Name",
+  "search.filters.filter.scientificname.label": "Search scientific name",
+  "search.filters.filter.scientificname.placeholder": "Scientific name",
+  "search.filters.applied.f.scientificname": "Scientific name",
+  "search.filters.filter.geographicname.head": "Geographic Name",
+  "search.filters.filter.geographicname.placeholder": "Geographic name",
+  "search.filters.applied.f.geographicname": "Geographic name",
+  "search.filters.filter.geographicname.label": "Search geographic name"
 }
