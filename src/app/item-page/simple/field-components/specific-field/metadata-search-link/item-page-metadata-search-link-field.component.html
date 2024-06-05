@@ -1,0 +1,14 @@
+<div class="item-page-field" *ngIf="item?.allMetadata(fields).length">
+  <ds-metadata-field-wrapper>
+    <div class="simple-view-element">
+      <h5 class="simple-view-element-header">{{ label | translate }}</h5>
+      <div class="simple-view-element-body">
+        <!-- Iterate over metadata values and generate search links -->
+        <ng-container *ngFor="let mdValue of item?.allMetadata(fields); let last=last;">
+          <a routerLink="/search" [queryParams]="generateSearchParams(mdValue.value, index)">{{ mdValue.value }}</a>
+          <span class="separator" *ngIf="!last" [innerHTML]="separator"></span>
+        </ng-container>
+      </div>
+    </div>
+  </ds-metadata-field-wrapper>
+</div>
