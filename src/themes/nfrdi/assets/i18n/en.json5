@@ -1,4 +1,7 @@
 {
   "item.page.doi": "DOI",
   "item.page.external-url": "Associated content",
+  "item.page.subject-agrovoc": "AGROVOC Keywords",
+  "item.page.subject-scientificname": "Taxonomic Terms",
+  "item.page.geographic-name": "Geographic Names"
 }

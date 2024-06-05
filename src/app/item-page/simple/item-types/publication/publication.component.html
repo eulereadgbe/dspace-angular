@@ -72,9 +72,24 @@
     </ds-generic-item-page-field>
 
     <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.subject']"
-      [separator]="', '"
+      [fields]="['local.subject']"
+      [separator]="'; '"
       [label]="'item.page.subject'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.subject']"
+      [separator]="'; '"
+      [label]="'item.page.subject-agrovoc'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.subject.scientificname']"
+      [separator]="'; '"
+      [label]="'item.page.subject-scientificname'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.coverage.spatial']"
+      [separator]="'; '"
+      [label]="'item.page.geographic-name'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.identifier.citation']"
