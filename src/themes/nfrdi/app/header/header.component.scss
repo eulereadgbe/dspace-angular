@@ -2,10 +2,12 @@
   nav.navbar {
     display: none;
   }
+}
+
+/* always set header background, not only on medium size screens! */
   .header {
     background-color: var(--ds-header-bg);
   }
-}
 
 .navbar-brand img {
   @media screen and (max-width: map-get($grid-breakpoints, md)) {
