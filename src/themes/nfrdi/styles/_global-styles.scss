@@ -25,6 +25,11 @@
     background-color: #f68212;
 }
 
-.badge {
-    font-weight: normal;
+.badge, .thumbnail-placeholder {
+    font-weight: normal !important;
+}
+
+.lead {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
 }
