@@ -1,0 +1,98 @@
+<footer class="text-lg-start">
+  <div *ngIf="showTopFooter" class="top-footer">
+    <!-- Grid container -->
+    <div class=" container p-4">
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="library-links add-border-right col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <span><img src="assets/nfrdi/images/screen-monitor.png"/></span>
+          <h5 class="text-uppercase">THE DIGITAL REPOSITORY</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a routerLink="./" class="">The Library</a>
+            </li>
+            <li>
+              <a routerLink="./" class="">About Us</a>
+            </li>
+            <li>
+              <a routerLink="./" class="">Resources</a>
+            </li>
+            <li>
+              <a routerLink="./" class="">Partners</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="kmrc-address add-border-right col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5>NFRDI Knowledge Management Resource Center</h5>
+          <p>
+            Room 503 - 5th Floor, Corporate 101 Building, Mother Ignacia Avenue, Brgy. South Triangle, Quezon City, Philippines<br/>
+            <a href="mailto:kmrc@nfrdi.da.gov.ph">kmrc@nfrdi.da.gov.ph</a><br/>
+          </p>
+          <p>
+            <small>&#0169; {{ dateObj | date:'y' }} <a href="https://nfrdi.da.gov.ph" target="_blank">National
+              Fisheries Research and Development Institute</a></small>
+          </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 social-icons">
+          <h5 class="text-uppercase">Connect with us</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="https://www.facebook.com/nfrdiphilippines" target="_blank"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/DA_NFRDI" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UC7IjciYEdNEK0VFGD23PRCA" target="_blank"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <!-- <div class="bottom-footer p-1 d-flex justify-content-center align-items-center text-white">
+    <div class="content-container">
+      <p class="m-0">
+        <a class="text-white"
+           href="http://www.dspace.org/">{{ 'footer.link.dspace' | translate}}</a>
+        {{ 'footer.copyright' | translate:{year: dateObj | date:'y'} }}
+        <a class="text-white"
+           href="https://www.lyrasis.org/">{{ 'footer.link.lyrasis' | translate}}</a>
+      </p>
+      <ul class="footer-info list-unstyled small d-flex justify-content-center mb-0">
+        <li>
+          <a class="text-white" href="javascript:void(0);"
+             (click)="showCookieSettings()">{{ 'footer.link.cookies' | translate}}</a>
+        </li>
+        <li *ngIf="showPrivacyPolicy">
+          <a class="text-white"
+             routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate}}</a>
+        </li>
+        <li *ngIf="showEndUserAgreement">
+          <a class="text-white"
+             routerLink="info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate}}</a>
+        </li>
+        <li *ngIf="showSendFeedback$ | async">
+          <a class="text-white"
+             routerLink="info/feedback">{{ 'footer.link.feedback' | translate}}</a>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+  <!-- Copyright -->
+</footer>
