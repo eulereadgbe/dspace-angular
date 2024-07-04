@@ -56,6 +56,11 @@
                 "bundleName": "custom-theme"
               },
               {
+                "input": "src/themes/dssc/styles/theme.scss",
+                "inject": false,
+                "bundleName": "dssc-theme"
+              },
+              {
                 "input": "src/themes/dspace/styles/theme.scss",
                 "inject": false,
                 "bundleName": "dspace-theme"

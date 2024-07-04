@@ -1,0 +1,69 @@
+:host {
+  header {
+    background-color: var(--ds-header-bg);
+    border-bottom: 6px solid maroon !important;
+  }
+
+  .navbar-brand img {
+    max-height: var(--ds-header-logo-height);
+    max-width: 100%;
+    float: left;
+  }
+
+  .navbar-toggler {
+    border: none;
+    color: var(--ds-header-icon-color);
+
+    &:hover, &:focus {
+      color: var(--ds-header-icon-color-hover);
+    }
+
+    .toggler-icon {
+      width: 1.5em;
+      height: 1.5em;
+      line-height: 1.5;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    gap: calc(var(--bs-spacer) / 3);
+    align-items: center;
+  }
+
+  .logo-header-wrapper {
+    display: inline-block;
+  }
+
+  .dssc-logo-wrapper {
+    float: left;
+  }
+
+  .headerInfoNameText {
+    float: left;
+    margin: 10px 0 0 -13px;
+  }
+
+  .headerInfoName {
+    font-weight: bold;
+    font-size: x-large;
+    font-variant: small-caps;
+  }
+
+  .headerInfoText {
+    font-size: large;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-top: -12px;
+  }
+
+  .headerInfoName, .headerInfoText {
+    color: white;
+    white-space: nowrap !important;
+  }
+
+  span {
+    display: block;
+    //margin-top: 4vw;
+  }
+}
