@@ -7,13 +7,13 @@
   --ds-home-news-link-color: #{$green};
   --ds-home-news-link-hover-color: #{darken($green, 15%)};
   --ds-header-navbar-border-bottom-color: #{$aqua};
-  --ds-header-bg: #{$primary};
+  --ds-header-bg: #{$white};
   --ds-navbar-bg: #{$white};
   --ds-header-navbar-border-top-color: #{$primary};
   --ds-navbar-link-color: #{$link-color};
   --ds-navbar-link-color-hover: #{darken($primary, 30%)};
-  --ds-header-icon-color: #{$white};
-  --ds-header-icon-color-hover: #{$gray-300};
+  --ds-header-icon-color: #070534;
+  --ds-header-icon-color-hover: #{$link-color};
   --ds-breadcrumb-link-color: #{$link-color};
   --ds-breadcrumb-link-active-color: #{darken($primary, 30%)};
   --ds-footer-bg: #{$charcoal};

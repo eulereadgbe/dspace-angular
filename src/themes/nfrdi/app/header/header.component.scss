@@ -40,27 +40,32 @@
 
   .headerInfoNameText {
     float: left;
-    margin: 25px 0 0;
+    margin: 13px 0 0;
   }
 
   .headerInfoName {
     font-weight: 600;
-    font-size: large;
+    font-size: larger;
     font-variant: small-caps;
     font-family: Poppins;
-    text-transform: uppercase;
     line-height: 14px;
   }
 
-  .headerInfoText {
-    font-size: small;
+  .headerInfoTextTop {
+    font-size: xx-small;
     font-weight: lighter;
-    text-transform: uppercase;
     margin-top: 0;
   }
 
-  .headerInfoName, .headerInfoText {
-    color: white;
+  .headerInfoTextBottom {
+    font-size: small;
+    font-weight: lighter;
+    margin-top: 0;
+  }
+
+  .headerInfoName, .headerInfoTextTop, .headerInfoTextBottom {
+    text-transform: uppercase;
+    color: #070534;
     //white-space: nowrap !important;
   }
 
