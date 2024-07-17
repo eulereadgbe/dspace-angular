@@ -12,8 +12,11 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { RootModule } from '../../app/root.module';
 import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
+import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 
 const DECLARATIONS = [
+  ItemPageComponent,
+  BreadcrumbsComponent,
 ];
 
 @NgModule({
@@ -30,9 +33,8 @@ const DECLARATIONS = [
     StoreRouterConnectingModule,
     TranslateModule,
     FormsModule,
-    BreadcrumbsComponent,
+    ...DECLARATIONS,
   ],
-  declarations: DECLARATIONS,
 })
 
 /**
