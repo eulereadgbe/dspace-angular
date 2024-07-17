@@ -1,0 +1,11 @@
+{
+  // DSpace default: "All of DSpace"
+  "menu.section.browse_global": "Browse DSSC Repository",
+
+  // DSpace default: "DSpace Angular :: "
+  "repository.title.prefix": "DSSC :: ",
+  "item.page.subject.agrovoc": "AGROVOC Keywords",
+  "item.page.subject.lcsh": "Subjects",
+  "item.page.subject.scientificname": "Taxonomic Terms",
+  "item.page.coverage.spatial": "Geographic Names"
+}

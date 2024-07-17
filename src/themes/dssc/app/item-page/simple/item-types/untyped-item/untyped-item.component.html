@@ -62,6 +62,26 @@
       [label]="'item.page.subject'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
+      [fields]="['local.subject.agrovoc']"
+      [separator]="'; '"
+      [label]="'item.page.subject.agrovoc'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+                                [fields]="['local.subject.scientificname']"
+                                [separator]="'; '"
+                                [label]="'item.page.subject.scientificname'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+                                [fields]="['dc.coverage.spatial']"
+                                [separator]="'; '"
+                                [label]="'item.page.coverage.spatial'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+                                [fields]="['dc.subject','dc.subject.lcsh']"
+                                [separator]="'; '"
+                                [label]="'item.page.subject.lcsh'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
       [fields]="['dc.identifier.citation']"
       [label]="'item.page.citation'">
     </ds-generic-item-page-field>
