@@ -7,7 +7,8 @@ import { ThemedPrivacyComponent } from './privacy/themed-privacy.component';
 import { ThemedFeedbackComponent } from './feedback/themed-feedback.component';
 import { FeedbackGuard } from '../core/feedback/feedback.guard';
 import { environment } from '../../environments/environment';
-
+import { ABOUT_PATH } from './info-routing-paths';
+import { AboutComponent } from './about/about.component';
 
 const imports = [
   RouterModule.forChild([
@@ -43,6 +44,17 @@ const imports = [
         }
       ]));
   }
+
+  imports.push(
+     RouterModule.forChild([
+       {
+         path: ABOUT_PATH,
+         component: AboutComponent,
+         resolve: { breadcrumb: I18nBreadcrumbResolver },
+         data: { title: 'info.about.title', breadcrumbKey: 'info.about' }
+       }
+     ])
+  );
 
 @NgModule({
   imports: [

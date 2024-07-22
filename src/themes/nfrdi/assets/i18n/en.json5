@@ -28,5 +28,7 @@
   "search.filters.filter.geographicname.head": "Geographic Name",
   "search.filters.filter.geographicname.placeholder": "Geographic name",
   "search.filters.applied.f.geographicname": "Geographic name",
-  "search.filters.filter.geographicname.label": "Search geographic name"
+  "search.filters.filter.geographicname.label": "Search geographic name",
+  "info.about.breadcrumbs": "About",
+  "info.about.title": "About",
 }
