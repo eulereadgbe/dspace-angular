@@ -14,6 +14,7 @@ import { ThemedFeedbackFormComponent } from './feedback/feedback-form/themed-fee
 import { ThemedFeedbackComponent } from './feedback/themed-feedback.component';
 import { FeedbackGuard } from '../core/feedback/feedback.guard';
 import { AboutComponent } from './about/about.component';
+import { PartnersComponent } from './partners/partners.component';
 
 const DECLARATIONS = [
   EndUserAgreementComponent,
@@ -26,7 +27,8 @@ const DECLARATIONS = [
   FeedbackFormComponent,
   ThemedFeedbackFormComponent,
   ThemedFeedbackComponent,
-  AboutComponent
+  AboutComponent,
+  PartnersComponent
 ];
 
 @NgModule({

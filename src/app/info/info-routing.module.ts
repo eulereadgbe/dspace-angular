@@ -9,6 +9,8 @@ import { FeedbackGuard } from '../core/feedback/feedback.guard';
 import { environment } from '../../environments/environment';
 import { ABOUT_PATH } from './info-routing-paths';
 import { AboutComponent } from './about/about.component';
+import { PARTNERS_PATH } from './info-routing-paths';
+import { PartnersComponent } from './partners/partners.component';
 
 const imports = [
   RouterModule.forChild([
@@ -52,6 +54,17 @@ const imports = [
          component: AboutComponent,
          resolve: { breadcrumb: I18nBreadcrumbResolver },
          data: { title: 'info.about.title', breadcrumbKey: 'info.about' }
+       }
+     ])
+  );
+
+  imports.push(
+     RouterModule.forChild([
+       {
+         path: PARTNERS_PATH,
+         component: PartnersComponent,
+         resolve: { breadcrumb: I18nBreadcrumbResolver },
+         data: { title: 'info.partners.title', breadcrumbKey: 'info.partners' }
        }
      ])
   );
