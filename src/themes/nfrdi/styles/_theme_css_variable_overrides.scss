@@ -1,0 +1,38 @@
+// Override or add CSS variables for your theme here
+
+:root {
+
+  @include media-breakpoint-up(md) {
+    --ds-header-logo-height: 50px;
+    --ds-header-height: 80px;
+  }
+  @include media-breakpoint-down(sm) {
+    --ds-header-logo-height: 50px;
+    --ds-header-height: 90px;
+  }
+
+  --ds-banner-text-background: rgba(0, 0, 0, 0.45);
+  --ds-banner-background-gradient-width: 300px;
+  --ds-home-news-link-color: #{$green};
+  --ds-home-news-link-hover-color: #{darken($green, 15%)};
+  --ds-header-navbar-border-bottom-color: #{$aqua};
+  --ds-header-bg: #{$white};
+  --ds-navbar-bg: #{$white};
+  --ds-header-navbar-border-top-color: #{$primary};
+  --ds-navbar-link-color: #{$link-color};
+  --ds-navbar-link-color-hover: #{darken($primary, 30%)};
+  --ds-header-icon-color: #070534;
+  --ds-header-icon-color-hover: #{$link-color};
+  --ds-breadcrumb-link-color: #{$link-color};
+  --ds-breadcrumb-link-active-color: #{darken($primary, 30%)};
+  --ds-footer-bg: #{$charcoal};
+  --ds-footer-link-color-hover: #{$aqua};
+
+  --ds-header-navbar-border-bottom-height: 5px;
+
+  /* set the next two properties as `--ds-header-navbar-border-bottom-*`
+  in order to keep the bottom border of the header when navbar is expanded */
+  --ds-expandable-navbar-border-top-color: #{$white};
+  --ds-expandable-navbar-border-top-height: 0;
+  --ds-expandable-navbar-padding-top: 0;
+}
