@@ -1,0 +1,115 @@
+:host {
+  footer {
+    background-color: var(--ds-footer-bg);
+    text-align: center;
+    z-index: var(--ds-footer-z-index);
+    border-top: var(--ds-footer-border);
+    padding: var(--ds-footer-padding);
+
+    p {
+      margin: 0;
+    }
+
+    div > img {
+      height: var(--ds-footer-logo-height);
+    }
+
+    .top-footer {
+      background-color: var(--ds-footer-bg);
+      padding: var(--ds-footer-padding);
+      margin: calc(var(--ds-footer-padding) * -1);
+      text-align: left;
+      color: white;
+      h5 {
+        font-weight: bold;
+        font-size: 17px;
+        top: 8px;
+        position: relative;
+      }
+    }
+
+    .library-links {
+      ul {
+        li > a {
+          color: white;
+          &:hover {
+            color: var(--ds-footer-link-color-hover);
+            text-decoration: none;
+          }
+          font-size: medium;
+        }
+      }
+    }
+
+    .library-links img {
+      float: left;
+      height: 50px;
+    }
+
+    .library-links h5 {
+      left: 13px;
+    }
+
+    .library-links ul {
+      margin-top: 36px;
+    }
+
+    .kmrc-address {
+      a {
+           color: white;
+           &:hover {
+             color: var(--ds-footer-link-color-hover);
+             text-decoration: none;
+           }
+        }
+    }
+
+    .social-icons {
+      ul {
+        li {
+          display: inline-flex;
+
+          a {
+            padding: 0 calc(var(--bs-spacer) / 2);
+            color: white;
+            font-size: 1.5rem;
+           &:hover {
+             color: var(--ds-footer-link-color-hover);
+             text-decoration: none;
+           }
+          }
+        }
+      }
+    }
+    .bottom-footer {
+      background-color: #10564f;
+      ul {
+        li {
+          display: inline-flex;
+
+          a {
+            padding: 0 calc(var(--bs-spacer) / 2);
+            color: inherit
+          }
+
+          &:not(:last-child) {
+            &:after {
+              content: '';
+              border-right: 1px $white solid;
+            }
+
+          }
+        }
+      }
+    }
+  }
+/** Mobile menu styling **/
+@media screen and (min-width: map-get($grid-breakpoints, lg)-0.02) {
+  .add-border-right
+  {
+    border-right: 2px white solid !important;
+  }
+}
+}
+
+

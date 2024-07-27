@@ -13,6 +13,7 @@ import { ItemPageModule } from '../../app/item-page/item-page.module';
 import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import { FooterComponent } from './app/footer/footer.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -28,6 +29,7 @@ const DECLARATIONS = [
   HeaderComponent,
   HeaderNavbarWrapperComponent,
   NavbarComponent,
+  FooterComponent,
 ];
 
 @NgModule({
