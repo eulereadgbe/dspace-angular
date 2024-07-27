@@ -80,6 +80,22 @@
       [fields]="['dc.identifier.uri']"
       [label]="'item.page.uri'">
     </ds-item-page-uri-field>
+    <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let doi of object.metadata['dc.identifier.doi']|keyvalue">
+      <div class="simple-view-element">
+        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.doi" | translate}}</h2>
+        <div class="simple-view-element-body">
+          <a class="dont-break-out" href="https://doi.org/{{doi.value.value}}" target="_blank">{{doi.value.value}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let url of object.metadata['dc.relation.uri']|keyvalue">
+      <div class="simple-view-element">
+        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.external-url" | translate}}</h2>
+        <div class="simple-view-element-body">
+          <a class="dont-break-out" href="{{url.value.value}}" target="_blank">{{ parseUrl(url.value.value) }}</a>
+        </div>
+      </div>
+    </div>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <div>
       <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button">

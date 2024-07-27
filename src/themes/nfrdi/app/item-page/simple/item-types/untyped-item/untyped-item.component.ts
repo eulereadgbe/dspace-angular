@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Item } from '../../../../../../../app/core/shared/item.model';
 import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
 import {
@@ -22,4 +22,13 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UntypedItemComponent extends BaseComponent {
+  @Input() item: Item;
+  /**
+   * Helper function to extract the hostname from a URI.
+   * @type {string}
+   */
+  parseUrl(url: string) {
+    const regex = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+    return regex && regex[1];
+    }
 }
