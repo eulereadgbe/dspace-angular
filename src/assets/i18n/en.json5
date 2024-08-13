@@ -1890,7 +1890,7 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in DSpace",
+  "home.top-level-communities.head": "Collections in NFRDI Digital Repository",
 
   "home.top-level-communities.help": "Select a community to browse its collections.",
 
@@ -1924,7 +1924,7 @@
 
   "info.feedback.title": "Feedback",
 
-  "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
+  "info.feedback.info": "Thanks for sharing your feedback about the NFRDI Digital Repository. Your comments are appreciated!",
 
   "info.feedback.email_help": "This address will be used to follow up on your feedback.",
 
@@ -2146,6 +2146,8 @@
 
   "item.edit.metadata.edit.value": "Edit value",
 
+  "item.edit.metadata.edit.authority.key": "Edit authority key",
+
   "item.edit.metadata.edit.buttons.confirm": "Confirm",
 
   "item.edit.metadata.edit.buttons.drag": "Drag to reorder",
@@ -2199,6 +2201,12 @@
   "item.edit.metadata.reset-order-button": "Undo reorder",
 
   "item.edit.metadata.save-button": "Save",
+
+  "item.edit.metadata.authority.label": "Authority: ",
+
+  "item.edit.metadata.edit.buttons.open-authority-edition": "Unlock the authority key value for manual editing",
+
+  "item.edit.metadata.edit.buttons.close-authority-edition": "Lock the authority key value for manual editing",
 
   "item.edit.modify.overview.field": "Field",
 
@@ -2433,6 +2441,24 @@
   "workflow-item.search.result.list.element.supervised-by": "Supervised by:",
 
   "workflow-item.search.result.list.element.supervised.remove-tooltip": "Remove supervision group",
+
+  "confidence.indicator.help-text.accepted": "This authority value has been confirmed as accurate by an interactive user",
+
+  "confidence.indicator.help-text.uncertain": "Value is singular and valid but has not been seen and accepted by a human so it is still uncertain",
+
+  "confidence.indicator.help-text.ambiguous": "There are multiple matching authority values of equal validity",
+
+  "confidence.indicator.help-text.notfound": "There are no matching answers in the authority",
+
+  "confidence.indicator.help-text.failed": "The authority encountered an internal failure",
+
+  "confidence.indicator.help-text.rejected": "The authority recommends this submission be rejected",
+
+  "confidence.indicator.help-text.novalue": "No reasonable confidence value was returned from the authority",
+
+  "confidence.indicator.help-text.unset": "Confidence was never recorded for this value",
+
+  "confidence.indicator.help-text.unknown": "Unknown confidence value",
 
   "item.page.abstract": "Abstract",
 
@@ -2838,7 +2864,7 @@
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
-  "login.form.header": "Please log in to DSpace",
+  "login.form.header": "Please log in to NFRDI Digital Repository",
 
   "login.form.new-user": "New user? Click here to register.",
 
@@ -2856,7 +2882,7 @@
 
   "login.breadcrumbs": "Login",
 
-  "logout.form.header": "Log out from DSpace",
+  "logout.form.header": "Log out from NFRDI Digital Repository",
 
   "logout.form.submit": "Log out",
 
@@ -2890,7 +2916,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "Browse",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -2904,7 +2930,7 @@
 
   "menu.section.browse_global_by_title": "By Title",
 
-  "menu.section.browse_global_communities_and_collections": "Communities & Collections",
+  "menu.section.browse_global_communities_and_collections": "Collections",
 
   "menu.section.control_panel": "Control Panel",
 
@@ -3112,7 +3138,7 @@
 
   "nav.expandable-navbar-section-suffix": "(submenu)",
 
-  "nav.browse.header": "All of DSpace",
+  "nav.browse.header": "Browse",
 
   "nav.community-browse.header": "By Community",
 
@@ -3498,7 +3524,7 @@
 
   "register-page.registration.header": "New user registration",
 
-  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to DSpace.",
+  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to NFRDI Digital Repository.",
 
   "register-page.registration.email": "Email Address *",
 
@@ -3580,9 +3606,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title": "DSpace Repository",
+  "repository.title": "NFRDI Digital Repository Repository",
 
-  "repository.title.prefix": "DSpace Repository :: ",
+  "repository.title.prefix": "NFRDI Digital Repository Repository :: ",
 
   "resource-policies.add.button": "Add",
 
@@ -3740,7 +3766,7 @@
 
   "search.filters.applied.f.namedresourcetype": "Status",
 
-  "search.filters.applied.f.subject": "Subject",
+  "search.filters.applied.f.subject": "AGROVOC Keyword",
 
   "search.filters.applied.f.submitter": "Submitter",
 
@@ -3880,11 +3906,11 @@
 
   "search.filters.filter.show-more": "Show more",
 
-  "search.filters.filter.subject.head": "Subject",
+  "search.filters.filter.subject.head": "AGROVOC Keyword",
 
-  "search.filters.filter.subject.placeholder": "Subject",
+  "search.filters.filter.subject.placeholder": "AGROVOC Keyword",
 
-  "search.filters.filter.subject.label": "Search subject",
+  "search.filters.filter.subject.label": "Search AGROVOC Keyword",
 
   "search.filters.filter.submitter.head": "Submitter",
 
@@ -3938,7 +3964,7 @@
 
   "search.form.search_dspace": "All repository",
 
-  "search.form.scope.all": "All of DSpace",
+  "search.form.scope.all": "All of NFRDI Digital Repository",
 
   "search.results.head": "Search Results",
 
@@ -4088,7 +4114,7 @@
 
   "submission.import-external.title.none": "Import metadata from an external source",
 
-  "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to DSpace.",
+  "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to NFRDI Digital Repository.",
 
   "submission.import-external.back-to-my-dspace": "Back to MyDSpace",
 
@@ -4856,7 +4882,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  "title": "DSpace",
+  title: "NFRDI Digital Repository",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
@@ -5367,4 +5393,50 @@
   "process.overview.unknown.user": "Unknown",
 
   "browse.search-form.placeholder": "Search the repository",
+
+  "item.page.doi": "DOI",
+
+  "item.page.external-url": "Associated content",
+
+  "item.page.subject-agrovoc": "AGROVOC Keywords",
+
+  "item.page.subject-scientificname": "Taxonomic Terms",
+
+  "item.page.geographic-name": "Geographic Names",
+
+  "search.filters.filter.scientificname.head": "Scientific Name",
+
+  "search.filters.filter.scientificname.label": "Search scientific name",
+
+  "search.filters.filter.scientificname.placeholder": "Scientific name",
+
+  "search.filters.applied.f.scientificname": "Scientific name",
+
+  "search.filters.filter.geographicname.head": "Geographic Name",
+
+  "search.filters.filter.geographicname.placeholder": "Geographic name",
+
+  "search.filters.applied.f.geographicname": "Geographic name",
+
+  "search.filters.filter.geographicname.label": "Search geographic name",
+
+  "item.page.sdg": "Contributes to SDGs",
+
+  "search.filters.filter.sdg.head": "SDG contribution",
+
+  "search.filters.filter.sdg.placeholder": "SDG",
+
+  "search.filters.filter.sdg.label": "Search SDG",
+
+  "search.filters.applied.f.sdg": "SDG",
+
+  "info.about.breadcrumbs": "About",
+
+  "info.about.title": "About",
+
+  "info.partners.breadcrumbs": "Partners",
+
+  "info.partners.title": "Our Partners",
+
+  "item.page.accessionnumber": "Accession Number",
 }
