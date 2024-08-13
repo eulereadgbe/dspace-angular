@@ -56,6 +56,7 @@ import {
 import { ComcolModule } from '../../app/shared/comcol/comcol.module';
 import { RootModule } from '../../app/root.module';
 import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
+import { BitstreamDownloadCounterComponent } from './app/bitstream-download-counter/bitstream-download-counter.component';
 import { BrowseByPageModule } from '../../app/browse-by/browse-by-page.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
@@ -66,6 +67,7 @@ import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 const DECLARATIONS = [
   FileSectionComponent,
   ItemPageComponent,
+  BitstreamDownloadCounterComponent,
 ];
 
 @NgModule({
