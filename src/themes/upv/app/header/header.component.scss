@@ -48,14 +48,13 @@
   .headerInfoName {
     font-weight: bold;
     font-size: x-large;
-    font-variant: small-caps;
     font-family: Marcellus;
   }
 
   .headerInfoText {
     font-size: large;
     font-weight: lighter;
-    text-transform: uppercase;
+    font-variant: small-caps;
     margin-top: -12px;
     font-family: Sen;
   }
@@ -69,4 +68,13 @@
     display: block;
     //margin-top: 4vw;
   }
+
+@media screen and (max-width: map-get($grid-breakpoints, lg)-0.02) {
+    .headerInfoText {
+    font-size: smaller;
+    }
+    .headerInfoName {
+    font-size: xx-large;
+    }
+ }
 }
