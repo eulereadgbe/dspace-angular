@@ -47,7 +47,7 @@ export class AbstractListableElementComponent<T extends ListableObject> {
   /**
    * Whether to show the badge label or not
    */
-  @Input() showLabel = true;
+  @Input() showLabel = false;
 
   /**
    * Whether to show the thumbnail preview
