@@ -35,7 +35,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
 /**
  * Component that represents an untyped Item page
  */
-@listableObjectComponent(Item, ViewMode.StandalonePage, Context.Any, 'unesco')
+@listableObjectComponent(Item, ViewMode.StandalonePage, Context.Any, 'dmmmsu')
 @Component({
   selector: 'ds-untyped-item',
   // styleUrls: ['./untyped-item.component.scss'],
@@ -69,14 +69,4 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
     ItemPageCcLicenseFieldComponent,
   ],
 })
-export class UntypedItemComponent extends BaseComponent {
-  @Input() item: Item;
-  /**
-   * Helper function to extract the hostname from a URI.
-   * @type {string}
-   */
-  parseUrl(url: string) {
-    const regex = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
-    return regex && regex[1];
-    }
-}
+export class UntypedItemComponent extends BaseComponent {}
