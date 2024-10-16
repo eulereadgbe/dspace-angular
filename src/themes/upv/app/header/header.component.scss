@@ -42,21 +42,21 @@
 
   .headerInfoNameText {
     float: left;
-    margin: 15px 0 0 -13px;
+    margin: 8px 0 0 53px;
   }
 
   .headerInfoName {
     font-weight: bold;
-    font-size: x-large;
+    font-size: xx-large;
     font-family: Marcellus;
   }
 
   .headerInfoText {
     font-size: large;
-    font-weight: lighter;
+    font-weight: normal;
     font-variant: small-caps;
     margin-top: -12px;
-    font-family: Sen;
+    font-family: "Open Sans";
   }
 
   .headerInfoName, .headerInfoText {
@@ -69,6 +69,16 @@
     //margin-top: 4vw;
   }
 
+header .navbar-brand .upv-logo img {
+  border-right: 1.5px solid #7B1113;
+  padding-right: 5px;
+  float: left;
+}
+
+header .navbar-brand .diuaa-logo img {
+  padding-left: 5px;
+}
+
 @media screen and (max-width: map-get($grid-breakpoints, lg)-0.02) {
     .headerInfoText {
     font-size: smaller;
@@ -76,5 +86,5 @@
     .headerInfoName {
     font-size: xx-large;
     }
- }
+  }
 }

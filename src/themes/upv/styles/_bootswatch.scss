@@ -4,7 +4,7 @@
 
 // Variables
 
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,400;0,900;1,400;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" !default;
 @if $web-font-path {
   @import url("#{$web-font-path}");
@@ -75,3 +75,11 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
     border-color: $primary !important;
     }
 }
+
+.lead {
+  font-family: $headings-font-family;
+}
+
+   button.dropdown-item.active > ul > li.text-primary {
+    color: $white !important;
+  }
