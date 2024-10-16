@@ -1,0 +1,19 @@
+{
+  // DSpace default: "All of DSpace"
+  "menu.section.browse_global": "Browse DIUAA",
+
+  // DSpace default: "DSpace Angular :: "
+  "repository.title.prefix": "DIUAA :: ",
+  "dso-selector.set-scope.community.button": "Search all of DIUAA",
+  "home.top-level-communities.head": "Collections in DIUAA",
+  "info.feedback.info": "Thanks for sharing your feedback about the DIUAA. Your comments are appreciated!",
+  "login.form.header": "Please log in to DIUAA",
+  "logout.form.header": "Log out from DIUAA",
+  "nav.browse.header": "All of DIUAA",
+  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to DIUAA.",
+  "repository.title": "Digital and Institutional UPV Academic Archives",
+  "search.form.scope.all": "All of DIUAA",
+  "title": "DIUAA",
+  "menu.header.diuaa.logo": "DIUAA Logo",
+  "menu.section.browse_global_communities_and_collections": "Collections"
+}
