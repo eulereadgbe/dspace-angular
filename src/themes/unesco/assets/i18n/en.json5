@@ -1,0 +1,25 @@
+{
+  // DSpace default: "All of DSpace"
+  "menu.section.browse_global": "Browse",
+
+  // DSpace default: "DSpace Angular :: "
+  "repository.title.prefix": "UNACOMODELI :: ",
+  "home.top-level-communities.head": "Collections in UNACOMODELI",
+  "info.feedback.info": "Thanks for sharing your feedback about the UNACOMODELI. Your comments are appreciated!",
+  "login.form.header": "Please log in to UNACOMODELI",
+  "logout.form.header": "Log out from UNACOMODELI",
+  "nav.browse.header": "Browse",
+  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to UNACOMODELI.",
+  "repository.title": "UNACOMODELI Repository",
+  "search.form.scope.all": "All of UNACOMODELI",
+  "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to UNACOMODELI.",
+  "title": "UNACOMODELI",
+  "menu.section.browse_global_communities_and_collections": "Collections",
+  "item.page.subject.agrovoc": "AGROVOC Keywords",
+  "item.page.subject.lcsh": "Subjects",
+  "item.page.subject.scientificname": "Taxonomic Terms",
+  "item.page.coverage.spatial": "Geographic Names",
+  "item.page.subject.sdg": "Contributes to SDGs",
+  "item.page.doi": "DOI",
+  "item.page.external-url": "Associated content"
+}
