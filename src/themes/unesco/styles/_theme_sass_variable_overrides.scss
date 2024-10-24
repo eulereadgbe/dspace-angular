@@ -8,7 +8,7 @@
  $gray-700: #495057 !default;  // Bootstrap $gray-700
  $gray-100: #f8f9fa !default;  //           $gray-100
 
- $blue:   #009edb !default;
+ $blue:   #0069b4 !default;
 // $blue:   #2B4E72 !default;
  $green:  #94BA65 !default;
  $cyan:   #006666 !default;
@@ -28,3 +28,12 @@
  ) !default;
 
  $link-color: map-get($theme-colors, primary) !default;
+.thumbnail-content {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  box-shadow: 0 1px 2px #00000013;
+  max-width: auto;
+  height: auto;
+}

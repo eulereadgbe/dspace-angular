@@ -1,5 +1,7 @@
 .nav-breadcrumb {
   background-color: var(--ds-breadcrumb-bg);
+  position: relative;
+  z-index: 13;
 }
 
 .breadcrumb {

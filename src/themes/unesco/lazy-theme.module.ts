@@ -13,6 +13,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { RootModule } from '../../app/root.module';
 import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
+import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
 
 const DECLARATIONS = [];
 
@@ -32,6 +33,7 @@ const DECLARATIONS = [];
     FormsModule,
     HomePageComponent,
     BreadcrumbsComponent,
+    FileSectionComponent,
   ],
   declarations: DECLARATIONS,
 })

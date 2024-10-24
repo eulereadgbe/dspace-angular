@@ -19,6 +19,14 @@
       background-color: var(--ds-top-footer-bg);
       padding: var(--ds-footer-padding);
       margin: calc(var(--ds-footer-padding) * -1);
+      text-align: left;
+      h5 {
+        font-weight: bold;
+        font-size: 17px;
+        top: 8px;
+        position: relative;
+      }
+
     }
 
     .bottom-footer {
@@ -64,6 +72,26 @@
               border-right: 1px $white solid;
             }
 
+          }
+        }
+      }
+    }
+    .footer-links > img {
+      float: left;
+      height: 150px;
+    }
+    .social-icons {
+      ul {
+        li {
+          display: inline-flex;
+
+          a {
+            padding: 0 calc(var(--bs-spacer) / 2);
+            font-size: 1.5rem;
+           &:hover {
+             color: var(--ds-footer-link-color-hover);
+             text-decoration: none;
+           }
           }
         }
       }

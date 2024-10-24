@@ -5,6 +5,8 @@
     background-color: var(--ds-navbar-bg);
     align-items: baseline;
     padding: 0;
+    box-shadow: 0 10px 10px -10px #0000002b;
+    border-bottom: none !important;
   }
 
   /** Mobile menu styling **/
@@ -12,7 +14,7 @@
     .navbar {
       width: 100vw;
       background-color: white !important;
-      position: absolute;
+      position: relative;
       overflow: hidden;
       height: 0;
       z-index: var(--ds-nav-z-index);
@@ -32,14 +34,14 @@
   }
 
   /* TODO remove when https://github.com/twbs/bootstrap/issues/24726 is fixed */
-  .navbar-expand-md.navbar-container {
+  /**.navbar-expand-md.navbar-container {
     @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
       > .navbar-inner-container {
         padding: 0 var(--bs-spacer);
       }
       padding: 0;
     }
-  }
+  } **/
 
   #main-navbar ::ng-deep {
     .ds-menu-item, .ds-menu-toggler-wrapper {

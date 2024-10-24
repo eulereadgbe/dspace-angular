@@ -19,4 +19,5 @@ import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.
   imports: [NgIf, RouterLink, AsyncPipe, DatePipe, TranslateModule],
 })
 export class FooterComponent extends BaseComponent {
+  showTopFooter = true;
 }
