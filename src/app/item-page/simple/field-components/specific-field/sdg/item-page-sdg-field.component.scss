@@ -1,0 +1,7 @@
+// Mimic style from metadata-field-wrapper component since we can't use it here
+@import '../../../../../shared/metadata-field-wrapper/metadata-field-wrapper.component';
+
+img.sdg {
+  width: 80px;
+  height: 80px;
+}

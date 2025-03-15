@@ -57,35 +57,35 @@
     </ds-generic-item-page-field>
 
     <ds-generic-item-page-field [item]="object"
-                                [fields]="['local.subject']"
-                                [separator]="'; '"
-                                [label]="'item.page.subject'">
+      [fields]="['local.subject']"
+      [separator]="'; '"
+      [label]="'item.page.subject'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
-                                [fields]="['dc.subject.agrovoc']"
-                                [separator]="'; '"
-                                [label]="'item.page.subject.agrovoc'">
+      [fields]="['dc.subject.agrovoc']"
+      [separator]="'; '"
+      [label]="'item.page.subject.agrovoc'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
-                                [fields]="['local.subject.scientificname']"
-                                [separator]="'; '"
-                                [label]="'item.page.subject.scientificname'">
+      [fields]="['local.subject.scientificname']"
+      [separator]="'; '"
+      [label]="'item.page.subject.scientificname'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
-                                [fields]="['dc.coverage.spatial']"
-                                [separator]="'; '"
-                                [label]="'item.page.coverage.spatial'">
+      [fields]="['dc.coverage.spatial']"
+      [separator]="'; '"
+      [label]="'item.page.coverage.spatial'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
-                                [fields]="['dc.subject','dc.subject.lcsh']"
-                                [separator]="'; '"
-                                [label]="'item.page.subject.lcsh'">
+      [fields]="['dc.subject','dc.subject.lcsh']"
+      [separator]="'; '"
+      [label]="'item.page.subject.lcsh'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-                                [fields]="['dc.subject.sdg']"
-                                [separator]="'; '"
-                                [label]="'item.page.subject.sdg'">
-    </ds-generic-item-page-field>
+    <ds-item-page-sdg-field
+      [item]="object"
+      [fields]="['dc.subject.sdg']"
+      [label]="'item.page.sdg'">
+    </ds-item-page-sdg-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.identifier.citation']"
       [label]="'item.page.citation'">
