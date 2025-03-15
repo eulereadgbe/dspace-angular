@@ -59,25 +59,34 @@
     <ds-generic-item-page-field [item]="object"
       [fields]="['local.subject']"
       [separator]="'; '"
-      [label]="'item.page.subject'">
+      [label]="'item.page.subject.local'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['dc.subject']"
+      [separator]="'; '"
+      [label]="'item.page.subject'"
+      [index]="'subject'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dc.subject.agrovoc']"
       [separator]="'; '"
-      [label]="'item.page.subject.agrovoc'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.subject.agrovoc'"
+      [index]="'agrovoc'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['local.subject.scientificname']"
       [separator]="'; '"
-      [label]="'item.page.subject.scientificname'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.subject.scientificname'"
+      [index]="'scientificname'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dc.coverage.spatial']"
       [separator]="'; '"
-      [label]="'item.page.coverage.spatial'">
-    </ds-generic-item-page-field>
+      [label]="'item.page.coverage.spatial'"
+      [index]="'geographicname'">
+    </ds-item-page-metadata-search-link>
     <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.subject','dc.subject.lcsh']"
+      [fields]="['dc.subject.lcsh']"
       [separator]="'; '"
       [label]="'item.page.subject.lcsh'">
     </ds-generic-item-page-field>

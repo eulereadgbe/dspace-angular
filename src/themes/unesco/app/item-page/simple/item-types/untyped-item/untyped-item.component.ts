@@ -33,6 +33,7 @@ import { listableObjectComponent } from '../../../../../../../app/shared/object-
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/sdg/item-page-sdg-field.component';
+import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/metadata-search-link/item-page-metadata-search-link-field.component';
 
 /**
  * Component that represents an untyped Item page
@@ -72,6 +73,7 @@ import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/si
     KeyValuePipe,
     NgForOf,
     ItemPageSdgFieldComponent,
+    ItemPageMetadataSearchLinkFieldComponent,
   ],
 })
 export class UntypedItemComponent extends BaseComponent {
