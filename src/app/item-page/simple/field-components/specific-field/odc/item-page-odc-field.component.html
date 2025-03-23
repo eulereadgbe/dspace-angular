@@ -1,0 +1,27 @@
+<div class="item-page-field" *ngIf="item?.allMetadata(fields).length">
+  <div class="simple-view-element">
+    <h2 class="simple-view-element-header" *ngIf="label">{{ label | translate }}</h2>
+    <div class="simple-view-element-body">
+      <div class="row">
+        <!-- Iterate over metadata values and send them to the sdgIcon template -->
+        <ng-container *ngFor="let field of fields">
+          <ng-container *ngFor="let value of item.metadata[field]">
+            <ng-template [ngTemplateOutlet]="odcIcon" [ngTemplateOutletContext]="{ value: value.value }"></ng-template>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Render the UN SDG Goal icon.
+     See: https://www.un.org/sustainabledevelopment/news/communications-material/
+-->
+<ng-template #odcIcon let-value="value">
+  <!-- Three icons per row on mobile, four on medium, six on larger screens. -->
+  <div class="col-4 col-md-3 col-lg-2 mb-2">
+    <a routerLink="/search" [queryParams]="{ 'f.odc': value + ',equals' }">
+      <img src="assets/images/odc-icons/challenge{{ calculateOdcNumber(value) }}.webp" [alt]="value" [title]="value" class="odc"/>
+    </a>
+  </div>
+</ng-template>

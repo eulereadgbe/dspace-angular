@@ -44,5 +44,10 @@
   "search.filters.filter.geographicname.head": "Geographic Name",
   "search.filters.filter.geographicname.placeholder": "Geographic name",
   "search.filters.applied.f.geographicname": "Geographic name",
-  "search.filters.filter.geographicname.label": "Search geographic name"
+  "search.filters.filter.geographicname.label": "Search geographic name",
+  "item.page.odc": "Addresses Ocean Decade Challenges",
+  "search.filters.filter.odc.head": "Ocean Decade Challenges",
+  "search.filters.filter.odc.label": "Search Ocean Decade Challenges",
+  "search.filters.filter.odc.placeholder": "Ocean Decade Challenges",
+  "search.filters.applied.f.odc": "Ocean Decade Challenge"
 }

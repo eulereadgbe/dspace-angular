@@ -34,7 +34,7 @@ import { ThemedResultsBackButtonComponent } from '../../../../../../../app/share
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/sdg/item-page-sdg-field.component';
 import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/metadata-search-link/item-page-metadata-search-link-field.component';
-
+import { ItemPageOdcFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/odc/item-page-odc-field.component';
 /**
  * Component that represents an untyped Item page
  */
@@ -73,6 +73,7 @@ import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../a
     KeyValuePipe,
     NgForOf,
     ItemPageSdgFieldComponent,
+    ItemPageOdcFieldComponent,
     ItemPageMetadataSearchLinkFieldComponent,
   ],
 })
