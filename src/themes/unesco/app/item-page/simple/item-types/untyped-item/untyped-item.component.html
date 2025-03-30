@@ -100,10 +100,14 @@
       [fields]="['dc.subject.odc']"
       [label]="'item.page.odc'">
     </ds-item-page-odc-field>
-    <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.identifier.citation']"
-      [label]="'item.page.citation'">
-    </ds-generic-item-page-field>
+    <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let citation of object.metadata['dc.identifier.citation']|keyvalue">
+      <div class="simple-view-element">
+        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.citation" | translate}}</h2>
+        <div class="simple-view-element-body">
+          <div [innerHTML]="citation.value.value">citation.value.value</div>
+        </div>
+      </div>
+    </div>
     <ds-item-page-uri-field [item]="object"
       [fields]="['dc.identifier.uri']"
       [label]="'item.page.uri'">
