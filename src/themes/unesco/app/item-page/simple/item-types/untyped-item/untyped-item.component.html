@@ -48,6 +48,16 @@
       [fields]="['dc.publisher']"
       [label]="'item.page.publisher'">
     </ds-generic-item-page-field>
+    <div class="item-page-field">
+      <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+        <div class="simple-view-element">
+          <div class="simple-view-element-body">
+            <ds-item-page-dimensions-field [item]="object"></ds-item-page-dimensions-field>
+            <ds-item-page-altmetric-field [item]="object"></ds-item-page-altmetric-field>
+          </div>
+        </div>
+      </ds-metadata-field-wrapper>
+    </div>
   </div>
   <div class="col-xs-12 col-md-6">
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
@@ -100,14 +110,11 @@
       [fields]="['dc.subject.odc']"
       [label]="'item.page.odc'">
     </ds-item-page-odc-field>
-    <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let citation of object.metadata['dc.identifier.citation']|keyvalue">
-      <div class="simple-view-element">
-        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.citation" | translate}}</h2>
-        <div class="simple-view-element-body">
-          <div [innerHTML]="citation.value.value">citation.value.value</div>
-        </div>
-      </div>
-    </div>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.identifier.citation']"
+      [label]="'item.page.citation'"
+      [enableMarkdown]="true">
+    </ds-generic-item-page-field>
     <ds-item-page-uri-field [item]="object"
       [fields]="['dc.identifier.uri']"
       [label]="'item.page.uri'">

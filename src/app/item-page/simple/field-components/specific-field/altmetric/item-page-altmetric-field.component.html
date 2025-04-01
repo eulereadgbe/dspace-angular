@@ -1,0 +1,31 @@
+<div class="item-page-field">
+  <div class="simple-view-element">
+    <!-- empty header so the badge matches vertical spacing of Share -->
+    <h2 class="simple-view-element-header"></h2>
+    <div class="simple-view-element-body">
+      <ng-container [ngTemplateOutlet]="altmetricBadgeDoi"
+                    [ngTemplateOutletContext]="{
+                                                itemDoi: item?.firstMetadataValue('dc.identifier.doi'),
+                                              }"
+                    *ngIf="item?.firstMetadataValue('dc.identifier.doi')">
+      </ng-container>
+      <!-- This should be safe because all DSpace items have a handle -->
+      <ng-container [ngTemplateOutlet]="altmetricBadgeHandle"
+                    [ngTemplateOutletContext]="{
+                                                itemHandle: item?.firstMetadataValue('dc.identifier.uri'),
+                                              }"
+                    *ngIf="!item?.firstMetadataValue('dc.identifier.doi')">
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- See: https://badge-docs.altmetric.com/getting-started.html -->
+<!-- Prefer using the Altmetric score for the DOI if it is present -->
+<ng-template #altmetricBadgeDoi let-itemDoi="itemDoi">
+  <div class="altmetric-embed" data-hide-no-mentions="true" data-badge-type="donut" data-badge-details="right" data-link-target="_blank" [attr.data-doi]=parseDoi(itemDoi)></div>
+</ng-template>
+
+<ng-template #altmetricBadgeHandle let-itemHandle="itemHandle">
+  <div class="altmetric-embed" data-hide-no-mentions="true" data-badge-type="donut" data-badge-popover="right" data-link-target="_blank" [attr.data-handle]=parseHandle(itemHandle)></div>
+</ng-template>

@@ -35,6 +35,8 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
 import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/sdg/item-page-sdg-field.component';
 import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/metadata-search-link/item-page-metadata-search-link-field.component';
 import { ItemPageOdcFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/odc/item-page-odc-field.component';
+import { ItemPageAltmetricFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/altmetric/item-page-altmetric-field.component';
+import { ItemPageDimensionsFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/dimensions/item-page-dimensions-field.component';
 /**
  * Component that represents an untyped Item page
  */
@@ -74,6 +76,8 @@ import { ItemPageOdcFieldComponent } from '../../../../../../../app/item-page/si
     NgForOf,
     ItemPageSdgFieldComponent,
     ItemPageOdcFieldComponent,
+    ItemPageAltmetricFieldComponent,
+    ItemPageDimensionsFieldComponent,
     ItemPageMetadataSearchLinkFieldComponent,
   ],
 })
