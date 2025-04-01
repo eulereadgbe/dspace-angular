@@ -58,12 +58,6 @@ export class ItemPageMetadataSearchLinkFieldComponent extends ItemPageFieldCompo
       const searchFilter = 'f.' + discoveryIndex;
       const searchValue = metadataValue + ',equals';
 
-      // Debugging logs
-      console.log(`Metadata Value: ${metadataValue}`);
-      console.log(`Discovery Index: ${discoveryIndex}`);
-      console.log(`Search Filter: ${searchFilter}`);
-      console.log(`Search Value: ${searchValue}`);
-
       // Note the special syntax for searchFilter, since we want to use the
       // string value of the searchFilter variable as the object key, not a
       // literal "searchFilter".
