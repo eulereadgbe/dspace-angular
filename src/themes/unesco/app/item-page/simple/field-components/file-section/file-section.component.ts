@@ -9,6 +9,7 @@ import { ThemedLoadingComponent } from '../../../../../../../app/shared/loading/
 import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
 import { FileSizePipe } from '../../../../../../../app/shared/utils/file-size-pipe';
 import { VarDirective } from '../../../../../../../app/shared/utils/var.directive';
+import { BitstreamDownloadCounterComponent } from '../../../../bitstream-download-counter/bitstream-download-counter.component'; // Import the standalone component
 
 @Component({
   selector: 'ds-themed-item-page-file-section',
@@ -24,6 +25,7 @@ import { VarDirective } from '../../../../../../../app/shared/utils/var.directiv
     TranslateModule,
     FileSizePipe,
     VarDirective,
+    BitstreamDownloadCounterComponent, // Add the imported component to the imports array
   ],
 })
 export class FileSectionComponent extends BaseComponent {
