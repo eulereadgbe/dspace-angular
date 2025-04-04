@@ -8,8 +8,9 @@
           <ng-template #useFileName>{{ dsoNameService.getName(file) }}</ng-template>
           <span> ({{(file?.sizeBytes) | dsFileSize }})</span>
         </ds-file-download-link>
-        <div>
+        <div *ngIf="downloadCounterComponentMap[file.id] && (downloadCounterComponentMap[file.id]?.downloadCount | async) !== 0">
           <ds-bitstream-download-counter
+            #downloadCounter
             [bitstream]="file"
             label="Downloads:">
           </ds-bitstream-download-counter>

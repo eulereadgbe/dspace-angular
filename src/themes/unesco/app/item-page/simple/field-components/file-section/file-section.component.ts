@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { FileSectionComponent as BaseComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/file-section.component';
@@ -28,6 +28,15 @@ import { BitstreamDownloadCounterComponent } from '../../../../bitstream-downloa
     BitstreamDownloadCounterComponent, // Add the imported component to the imports array
   ],
 })
-export class FileSectionComponent extends BaseComponent {
+export class FileSectionComponent extends BaseComponent implements AfterViewInit {
+  @ViewChildren('downloadCounter') downloadCounterComponents: QueryList<BitstreamDownloadCounterComponent>;
+  downloadCounterComponentMap: { [key: string]: BitstreamDownloadCounterComponent } = {};
 
+  ngAfterViewInit(): void {
+    this.downloadCounterComponents.forEach(component => {
+      if (component.bitstream?.id) {
+        this.downloadCounterComponentMap[component.bitstream.id] = component;
+      }
+    });
+  }
 }
