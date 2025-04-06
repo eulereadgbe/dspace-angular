@@ -1,0 +1,33 @@
+<div class="item-page-field">
+  <!-- replicate metadata-field-wrapper functionality here -->
+  <div class="simple-view-element">
+    <h2 class="simple-view-element-header">Share</h2>
+    <div class="simple-view-element-body">
+      <!-- Fetch the title and Handle metadata values directly to keep
+           this component simple. -->
+      <ng-container [ngTemplateOutlet]="shareIcons"
+                    [ngTemplateOutletContext]="{
+                                                itemTitle: item?.firstMetadataValue('dc.title'),
+                                                itemUri: item?.firstMetadataValue('dc.identifier.uri'),
+                                              }">
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #shareIcons let-itemTitle="itemTitle" let-itemUri="itemUri">
+  <!-- Note that we don't use [href] here so that we can access the variables
+       via the {{ }} Angular expression binding syntax. -->
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ itemUri }}" title="Share on Facebook" target="_blank">
+    <i class="fa-brands fa-square-facebook fa-2x pr-1"></i>
+  </a>
+  <a href="https://x.com/intent/post?url={{ itemUri }}&text={{ itemTitle }}" title="Post this" target="_blank">
+    <i class="fa-brands fa-square-x-twitter fa-2x pr-1"></i>
+  </a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ itemUri }}" title="Share on LinkedIn" target="_blank">
+    <i class="fa-brands fa-linkedin fa-2x pr-1"></i>
+  </a>
+  <a href="mailto:?&body={{ itemUri }}&media=&subject={{ itemTitle }}" title="Share via e-mail" target="_blank">
+    <i class="fa-solid fa-square-envelope fa-2x"></i>
+  </a>
+</ng-template>
