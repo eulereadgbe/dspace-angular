@@ -30,3 +30,9 @@
 // ) !default;
 //
 // $link-color: map-get($theme-colors, info) !default;
+ds-base-thumbnail>.thumbnail>img {
+    box-shadow: -1px 0 15px -6px #ccc;
+}
+ds-search-filter > .facet-filter > .filter-name > span {
+    font-size: 1.25rem;
+}
