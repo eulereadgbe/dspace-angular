@@ -32,18 +32,21 @@
       [metadataFields]="['dc.contributor.author', 'dc.creator']"
       [label]="'relationships.isAuthorOf' | translate">
     </ds-metadata-representation-list>
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dc.contributor.advisor']"
+      [index]="'advisor'"
       [label]="'item.page.advisor'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dc.contributor.chair']"
-      [label]="'item.page.chair'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.chair'"
+      [index]="'chair'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dc.contributor.committeemember']"
-      [label]="'item.page.committee'">
-    </ds-generic-item-page-field>
+      [label]="'item.page.committee'"
+      [index]="'committeemember'">
+    </ds-item-page-metadata-search-link>
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.title']"
       [label]="'item.page.journal-title'">
@@ -85,26 +88,29 @@
       [separator]="'; '"
       [label]="'item.page.keyword'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.subject.agrovoc']"
-      [separator]="'; '"
-      [label]="'item.page.agrovoc'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
+                                       [fields]="['dc.subject.agrovoc']"
+                                       [separator]="'; '"
+                                       [label]="'item.page.agrovoc'"
+                                       [index]="'agrovoc'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dc.subject.scientificname']"
       [separator]="'; '"
-      [label]="'item.page.scientificname'">
-    </ds-generic-item-page-field>
+      [label]="'item.page.scientificname'"
+      [index]="'scientificname'">
+    </ds-item-page-metadata-search-link>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.subject.lcsh']"
       [separator]="'; '"
       [label]="'item.page.subject'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dc.coverage.spatial']"
       [separator]="'; '"
-      [label]="'item.page.geographicname'">
-    </ds-generic-item-page-field>
+      [label]="'item.page.geographicname'"
+      [index]="'geographicname'">
+    </ds-item-page-metadata-search-link>
     <ds-item-page-sdg-field
       [item]="object"
       [fields]="['dc.subject.sdg']"
