@@ -117,8 +117,9 @@
       [label]="'item.page.sdg'">
     </ds-item-page-sdg-field>
     <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.identifier.citation']"
-      [label]="'item.page.citation'">
+                                [fields]="['dc.identifier.citation']"
+                                [label]="'item.page.citation'"
+                                [enableMarkdown]="true">
     </ds-generic-item-page-field>
     <ds-item-page-uri-field [item]="object"
       [fields]="['dc.identifier.uri']"
