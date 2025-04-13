@@ -79,4 +79,15 @@ export class ItemPageFieldComponent {
         map((def) => def.payload),
       );
     }
+    /**
+     * Checks if the given metadata field should have justified text.
+     * @param field The metadata field name.
+     * @returns True if the field should be justified, false otherwise.
+     */
+  shouldJustifyFields(fields: string[]): boolean {
+    return fields.some(field =>
+      field.startsWith('dc.description.') ||
+      field === 'dc.description' // Explicitly check for 'dc.description'
+    );
+  }
 }
