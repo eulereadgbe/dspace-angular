@@ -56,31 +56,36 @@
       [label]="'item.page.description'">
     </ds-generic-item-page-field>
 
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['local.subject']"
       [separator]="'; '"
-      [label]="'item.page.subject'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [index]="'keyword'"
+      [label]="'item.page.keyword'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['local.subject.agrovoc']"
       [separator]="'; '"
-      [label]="'item.page.subject.agrovoc'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.subject.agrovoc'"
+      [index]="'agrovoc'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
                                 [fields]="['local.subject.scientificname']"
                                 [separator]="'; '"
+                                [index]="'scientificname'"
                                 [label]="'item.page.subject.scientificname'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
                                 [fields]="['dc.coverage.spatial']"
                                 [separator]="'; '"
+                                [index]="'geographicname'"
                                 [label]="'item.page.coverage.spatial'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-                                [fields]="['dc.subject','dc.subject.lcsh']"
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
+                                [fields]="['dc.subject.lcsh']"
                                 [separator]="'; '"
+                                [index]="'lcsh'"
                                 [label]="'item.page.subject.lcsh'">
-    </ds-generic-item-page-field>
+    </ds-item-page-metadata-search-link>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.identifier.citation']"
       [label]="'item.page.citation'">
