@@ -29,6 +29,7 @@ import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/m
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
+import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/sdg/item-page-sdg-field.component';
 import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/metadata-search-link/item-page-metadata-search-link-field.component';
 
 /**
@@ -66,6 +67,7 @@ import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../a
     AsyncPipe,
     TranslateModule,
     ItemPageCcLicenseFieldComponent,
+    ItemPageSdgFieldComponent,
     ItemPageMetadataSearchLinkFieldComponent,
   ],
 })

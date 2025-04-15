@@ -86,6 +86,11 @@
                                 [index]="'lcsh'"
                                 [label]="'item.page.subject.lcsh'">
     </ds-item-page-metadata-search-link>
+    <ds-item-page-sdg-field
+      [item]="object"
+      [fields]="['local.subject.sdg']"
+      [label]="'item.page.sdg'">
+    </ds-item-page-sdg-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.identifier.citation']"
       [label]="'item.page.citation'">
