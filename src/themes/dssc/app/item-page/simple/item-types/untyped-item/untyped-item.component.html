@@ -44,10 +44,18 @@
       [fields]="['journalvolume.identifier.name']"
       [label]="'item.page.volume-title'">
     </ds-generic-item-page-field>
+    <div *ngIf="object?.metadata['thesis.degree.grantor']?.length > 0; else showPublisher">
+      <ds-generic-item-page-field [item]="object"
+        [fields]="['thesis.degree.grantor']"
+        [label]="'item.page.degree.grantor'">
+      </ds-generic-item-page-field>
+    </div>
+    <ng-template #showPublisher>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.publisher']"
       [label]="'item.page.publisher'">
     </ds-generic-item-page-field>
+    </ng-template>
   </div>
   <div class="col-xs-12 col-md-6">
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
@@ -69,22 +77,22 @@
       [index]="'agrovoc'">
     </ds-item-page-metadata-search-link>
     <ds-item-page-metadata-search-link [item]="object"
-                                [fields]="['local.subject.scientificname']"
-                                [separator]="'; '"
-                                [index]="'scientificname'"
-                                [label]="'item.page.subject.scientificname'">
+      [fields]="['local.subject.scientificname']"
+      [separator]="'; '"
+      [index]="'scientificname'"
+      [label]="'item.page.subject.scientificname'">
     </ds-item-page-metadata-search-link>
     <ds-item-page-metadata-search-link [item]="object"
-                                [fields]="['dc.coverage.spatial']"
-                                [separator]="'; '"
-                                [index]="'geographicname'"
-                                [label]="'item.page.coverage.spatial'">
+      [fields]="['dc.coverage.spatial']"
+      [separator]="'; '"
+      [index]="'geographicname'"
+      [label]="'item.page.coverage.spatial'">
     </ds-item-page-metadata-search-link>
     <ds-item-page-metadata-search-link [item]="object"
-                                [fields]="['dc.subject.lcsh']"
-                                [separator]="'; '"
-                                [index]="'lcsh'"
-                                [label]="'item.page.subject.lcsh'">
+      [fields]="['dc.subject.lcsh']"
+      [separator]="'; '"
+      [index]="'lcsh'"
+      [label]="'item.page.subject.lcsh'">
     </ds-item-page-metadata-search-link>
     <ds-item-page-sdg-field
       [item]="object"
@@ -99,6 +107,25 @@
       [fields]="['dc.identifier.uri']"
       [label]="'item.page.uri'">
     </ds-item-page-uri-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.format.extent']"
+      [label]="'item.page.formatextent'">
+    </ds-generic-item-page-field>
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['thesis.degree.discipline']"
+      [label]="'item.page.discipline'"
+      [index]="'discipline'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['thesis.degree.name']"
+      [label]="'item.page.degree'"
+      [index]="'degree'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['thesis.degree.department']"
+      [label]="'item.page.discipline'"
+      [index]="'department'">
+    </ds-item-page-metadata-search-link>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <ds-item-page-uri-field [item]="object"
       [fields]="['coar.notify.endorsedBy']"

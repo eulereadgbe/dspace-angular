@@ -33,5 +33,22 @@
   "search.filters.filter.sdg.head": "SDG contribution",
   "search.filters.filter.sdg.placeholder": "SDG",
   "search.filters.filter.sdg.label": "Search SDG",
-  "search.filters.applied.f.sdg": "SDG"
+  "search.filters.applied.f.sdg": "SDG",
+  "item.page.department": "Department",
+  "search.filters.filter.department.head": "Department",
+  "search.filters.filter.department.placeholder": "Department",
+  "search.filters.filter.department.label": "Search Department",
+  "search.filters.applied.f.department": "Department",
+  "item.page.degree": "Degree",
+  "search.filters.filter.degree.head": "Degree",
+  "search.filters.filter.degree.placeholder": "Degree",
+  "search.filters.filter.degree.label": "Search Degree",
+  "search.filters.applied.f.degree": "Degree",
+  "item.page.degree.grantor": "Degree Grantor",
+  "item.page.discipline": "Discipline",
+  "search.filters.filter.discipline.head": "Discipline",
+  "search.filters.filter.discipline.placeholder": "Discipline",
+  "search.filters.filter.discipline.label": "Search Discipline",
+  "search.filters.applied.f.discipline": "Discipline",
+  "item.page.formatextent": "Physical Description"
 }
