@@ -29,3 +29,12 @@
 // ) !default;
 //
 // $link-color: map-get($theme-colors, info) !default;
+ds-base-thumbnail>.thumbnail>img {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    box-shadow: -1px 0 15px -6px #ccc;
+    max-width: 100%;
+    height: auto;
+}
