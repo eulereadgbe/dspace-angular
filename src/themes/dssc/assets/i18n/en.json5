@@ -1,9 +1,10 @@
 {
   // DSpace default: "All of DSpace"
-  "menu.section.browse_global": "Browse DSSC Repository",
+  "menu.section.browse_global": "Browse DSSC Institutional Repository",
 
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "DSSC :: ",
+  "home.top-level-communities.head": "Communities in DSSC Institutional Repository",
   "item.page.subject.agrovoc": "AGROVOC Keywords",
   "search.filters.filter.agrovoc.head": "AGROVOC Keyword",
   "search.filters.filter.agrovoc.label": "Search AGROVOC Keyword",
