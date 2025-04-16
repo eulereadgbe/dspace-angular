@@ -13,10 +13,12 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { RootModule } from '../../app/root.module';
 import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
+import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
 
 const DECLARATIONS = [
   ItemPageComponent,
   BreadcrumbsComponent,
+  FileSectionComponent,
 ];
 
 @NgModule({
