@@ -105,6 +105,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     if (isPlatformBrowser(this.platformId)) {
       this.trackIdleModal();
+      this.calculateScrollbarWidth(); // Call the function to calculate scrollbar width
     }
 
     this.isThemeLoading$ = this.themeService.isThemeLoading$;
@@ -182,4 +183,10 @@ export class AppComponent implements OnInit, AfterViewInit {
       });
   }
 
+  calculateScrollbarWidth(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+    }
+  }
 }
