@@ -38,6 +38,7 @@ import { ItemPageOdcFieldComponent } from '../../../../../../../app/item-page/si
 import { ItemPageAltmetricFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/altmetric/item-page-altmetric-field.component';
 import { ItemPageDimensionsFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/dimensions/item-page-dimensions-field.component';
 import { ItemPageShareFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/share/item-page-share-field.component';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 /**
  * Component that represents an untyped Item page
  */
@@ -81,6 +82,7 @@ import { ItemPageShareFieldComponent } from '../../../../../../../app/item-page/
     ItemPageDimensionsFieldComponent,
     ItemPageMetadataSearchLinkFieldComponent,
     ItemPageShareFieldComponent,
+    NgbTooltipModule,
   ],
 })
 export class UntypedItemComponent extends BaseComponent {
