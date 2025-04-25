@@ -3,22 +3,14 @@ import {
   NgIf,
   KeyValuePipe,
   NgForOf,
-  CommonModule,
 } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
   Input,
-  OnInit,
-  OnDestroy,
-  ElementRef,
-  ViewChild,
-  Inject,
 } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { RouteService } from '../../../../../../../app/core/services/route.service'; // Import RouteService
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap'; // Import NgbModal
 
 import { Context } from '../../../../../../../app/core/shared/context.model';
 import { Item } from '../../../../../../../app/core/shared/item.model';
@@ -46,20 +38,22 @@ import { ItemPageOdcFieldComponent } from '../../../../../../../app/item-page/si
 import { ItemPageAltmetricFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/altmetric/item-page-altmetric-field.component';
 import { ItemPageDimensionsFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/dimensions/item-page-dimensions-field.component';
 import { ItemPageShareFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/share/item-page-share-field.component';
-import { getItemPageRoute } from '../../../../../../../app/item-page/item-page-routing-paths';
-import { map, takeUntil } from 'rxjs/operators';
-import { Observable, of, Subject } from 'rxjs';
-import { getAllSucceededRemoteDataPayload } from '../../../../../../../app/core/shared/operators';
-
+/**
+ * Component that represents an untyped Item page
+ */
 @listableObjectComponent(Item, ViewMode.StandalonePage, Context.Any, 'unesco')
 @Component({
   selector: 'ds-untyped-item',
-  styleUrls: ['./untyped-item.component.scss'],
+  // styleUrls: ['./untyped-item.component.scss'],
+  styleUrls: [
+    '../../../../../../../app/item-page/simple/item-types/untyped-item/untyped-item.component.scss',
+  ],
   templateUrl: './untyped-item.component.html',
+  //templateUrl:
+  //  '../../../../../../../app/item-page/simple/item-types/untyped-item/untyped-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
-    CommonModule,
     NgIf,
     ThemedResultsBackButtonComponent,
     MiradorViewerComponent,
@@ -89,80 +83,14 @@ import { getAllSucceededRemoteDataPayload } from '../../../../../../../app/core/
     ItemPageShareFieldComponent,
   ],
 })
-export class UntypedItemComponent extends BaseComponent implements OnInit, OnDestroy {
+export class UntypedItemComponent extends BaseComponent {
   @Input() item: Item;
-
-  modalUrl: string | null = null;
-  closing = false;
-
-  hasOriginalBitstream$: Observable<boolean> = of(false);
-  itemPageRoute: string;
-
-  @ViewChild('customModalOverlay') modalOverlayRef: ElementRef<HTMLDivElement>;
-
-  private destroyed$: Subject<boolean> = new Subject<boolean>();
-
-  constructor(
-    protected routeService: RouteService,
-    protected router: Router,
-    private modalService: NgbModal // Inject NgbModal
-  ) {
-    super(routeService, router);
-  }
-
-  ngOnInit(): void {
-    super.ngOnInit();
-    this.hasOriginalBitstream$ = this.object.bundles.pipe(
-      getAllSucceededRemoteDataPayload(),
-      map((bundleList) => {
-        const bundles = bundleList.page;
-        return bundles?.some(b =>
-          b.name === 'ORIGINAL' && Array.isArray(b.bitstreams) && b.bitstreams.length > 0
-        ) ?? false;
-      })
-    );
-    this.itemPageRoute = `/items/${this.object.uuid}`;
-    window.addEventListener('keydown', this.handleEscapeKey);
-  }
-
-  ngOnDestroy(): void {
-    this.destroyed$.next(true);
-    this.destroyed$.complete();
-    window.removeEventListener('keydown', this.handleEscapeKey);
-  }
-
-  parseUrl(url: string): string | null {
-    const regex = url.match(/^https?:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
-    return regex?.[1] ?? null;
-  }
-
-  hasRelationUri(): boolean {
-    return !!this.object?.metadata['dc.relation.uri']?.length;
-  }
-
-  private modalRef: any; // To store the NgbModalRef
-
-  openModal(modalContent: any, url: string): void {
-    this.modalUrl = url;
-    this.closing = false;
-    this.modalRef = this.modalService.open(modalContent, { size: 'lg' });
-  }
-
-  closeModal(): void {
-      this.closing = true;
-      if (this.modalRef) {
-        this.modalRef.dismiss(); // Or this.modalRef.close() depending on your use case
-        this.modalRef = null; // Clear the reference
-      }
-      // We no longer need to manually remove 'modal-open-noscroll' here,
-      // ng-bootstrap usually handles body class management.
-      this.modalUrl = null;
-      this.closing = false;
+  /**
+   * Helper function to extract the hostname from a URI.
+   * @type {string}
+   */
+  parseUrl(url: string) {
+    const regex = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+    return regex && regex[1];
     }
-
-  handleEscapeKey = (event: KeyboardEvent): void => {
-    if (event.key === 'Escape') {
-      this.closeModal();
-    }
-  };
 }

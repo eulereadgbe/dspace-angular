@@ -24,28 +24,7 @@
     <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
       <ds-media-viewer [item]="object"></ds-media-viewer>
     </div>
-    <!-- Show dc.relation.uri if it exists -->
-    <ng-container *ngIf="hasRelationUri(); else showOriginalFiles">
-      <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let url of object.metadata['dc.relation.uri'] | keyvalue">
-        <div class="simple-view-element">
-          <h2 class="simple-view-element-header" style="font-size: 1.25rem;">
-            {{"item.page.external-url" | translate}}
-          </h2>
-          <div class="simple-view-element-body">
-        <span class="tooltip-wrapper">
-          <a href="#" class="btn btn-link p-0 dont-break-out" (click)="openModal(externalLinkModal, url.value.value); $event.preventDefault();">
-            {{ parseUrl(url.value.value) }}
-          </a>
-          <span class="tooltip-text small">External link to view/download this item</span>
-        </span>
-          </div>
-        </div>
-      </div>
-    </ng-container>
-    <!-- Fallback: show original uploaded files -->
-    <ng-template #showOriginalFiles>
-      <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
-    </ng-template>
+    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
     <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
       [parentItem]="object"
@@ -151,6 +130,14 @@
         </div>
       </div>
     </div>
+    <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let url of object.metadata['dc.relation.uri']|keyvalue">
+      <div class="simple-view-element">
+        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.external-url" | translate}}</h2>
+        <div class="simple-view-element-body">
+          <a class="dont-break-out" href="{{url.value.value}}" target="_blank">{{ parseUrl(url.value.value) }}</a>
+        </div>
+      </div>
+    </div>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <ds-item-page-uri-field [item]="object"
       [fields]="['coar.notify.endorsedBy']"
@@ -177,32 +164,3 @@
     </div>
   </div>
 </div>
-<!-- Bootstrap-styled modal -->
-<ng-template #externalLinkModal let-modal>
-  <div class="modal-header">
-    <h5 class="modal-title">EXTERNAL LINKS DISCLAIMER</h5>
-    <button type="button" class="btn btn-secondary" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <p>
-      This link is being provided as a convenience and for informational purposes only. UNACOM bears no
-      responsibility for the accuracy, legality or content of the external site or for that of subsequent links.
-      Contact the external site for answers to questions regarding its content.
-    </p>
-    <p>
-      If you come across any external links that don't work, we would be grateful if you could report them to the
-      repository administrators.
-    </p>
-    <p>
-      Click <b>DOWNLOAD</b> to open/view the file.
-      <a routerLink="/info/feedback" (click)="modal.close('Feedback link')">{{ 'footer.link.feedback' | translate}}</a>
-      in case the link we provided doesn't work.
-    </p>
-  </div>
-  <div class="modal-footer d-flex justify-content-between">
-    <a class="btn btn-primary" [href]="modalUrl" target="_blank" (click)="modal.close('Download click')">DOWNLOAD</a>
-    <button class="btn btn-secondary" (click)="modal.close('Close click')">CLOSE</button>
-  </div>
-</ng-template>

@@ -2,11 +2,3 @@
 
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
-.nav-breadcrumb {
-  z-index: 1 !important;
-}
-body.modal-open-noscroll {
-  overflow: hidden;
-  padding-right: var(--scrollbar-width);
-  margin-right: 0 !important; /* Add this line */
-}
