@@ -1,10 +1,13 @@
 import {
   AsyncPipe,
   NgIf,
+  KeyValuePipe,
+  NgForOf,
 } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  Input,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -69,6 +72,18 @@ import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../a
     ItemPageCcLicenseFieldComponent,
     ItemPageSdgFieldComponent,
     ItemPageMetadataSearchLinkFieldComponent,
+    KeyValuePipe,
+    NgForOf,
   ],
 })
-export class UntypedItemComponent extends BaseComponent {}
+export class UntypedItemComponent extends BaseComponent {
+  @Input() item: Item;
+  /**
+   * Helper function to extract the hostname from a URI.
+   * @type {string}
+   */
+  parseUrl(url: string) {
+    const regex = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+    return regex && regex[1];
+    }
+}

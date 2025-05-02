@@ -16,6 +16,7 @@
   "title": "UPV-Digital Repository",
   "menu.header.upv-dr.logo": "UPV-DR Logo",
   "menu.section.browse_global_communities_and_collections": "Collections",
+  "item.page.doi": "DOI",
   "item.page.agrovoc": "AGROVOC Keyword",
   "search.filters.filter.agrovoc.head": "AGROVOC Keyword",
   "search.filters.filter.agrovoc.label": "Search AGROVOC Keyword",
