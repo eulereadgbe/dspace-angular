@@ -130,18 +130,21 @@
       [fields]="['dc.format.extent']"
       [label]="'item.page.formatextent'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['thesis.degree.discipline']"
-      [label]="'item.page.discipline'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.discipline'"
+      [index]="'discipline'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['thesis.degree.name']"
-      [label]="'item.page.degree'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.degree'"
+      [index]="'degree'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['thesis.degree.department']"
-      [label]="'item.page.department'">
-    </ds-generic-item-page-field>
+      [label]="'item.page.department'"
+      [index]="'department'">
+    </ds-item-page-metadata-search-link>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <ds-item-page-uri-field [item]="object"
       [fields]="['coar.notify.endorsedBy']"
