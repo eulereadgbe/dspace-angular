@@ -4,9 +4,9 @@
   div.background-image-container {
     color: white;
     position: relative;
-    background-image: url('/assets/upv/images/upv-diuaa-banner.jpg');
+    background-image: url('/assets/upv/images/upv-dr-banner.png');
     background-size: cover;
-    background-position: top;
+    background-position: 50% 50%;
 
     /*.background-image > img {
       background-color: var(--bs-info);
@@ -72,15 +72,27 @@
     }
   }
 
-  .homePageText {
-    height: auto;
-    width: fit-content;
-    border-radius: 25px;
-    padding: 20px 20px 10px 20px;
-    background: rgba(123, 17, 19, 0.5);
-    text-shadow: 1px 1px 4px rgba(0,0,0,.6);
-    text-align: justify;
-  }
+.homePageText {
+  position: relative;
+  width: 79%;
+  padding: 20px;
+  background: rgba(123, 17, 19, 0.5);
+  text-shadow: 1px 1px 4px rgba(0,0,0,.6);
+  text-align: justify;
+  color: white;
+}
+
+.homePageText::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5vw; /* Adjust based on triangle width */
+  width: 5vw;   /* Responsive triangle width */
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,50 0,100" fill="rgba(123,17,19,0.5)" /></svg>') no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+}
 
   p.lead {
   font-family: "Roboto", sans-serif;
