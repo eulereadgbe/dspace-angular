@@ -51,5 +51,7 @@
   "search.filters.filter.discipline.placeholder": "Discipline",
   "search.filters.filter.discipline.label": "Search Discipline",
   "search.filters.applied.f.discipline": "Discipline",
-  "item.page.formatextent": "Physical Description"
+  "item.page.formatextent": "Physical Description",
+  "item.page.doi": "DOI",
+  "item.page.external-url": "View/Download"
 }

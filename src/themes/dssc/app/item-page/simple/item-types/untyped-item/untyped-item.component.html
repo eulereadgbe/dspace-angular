@@ -128,6 +128,22 @@
       [label]="'item.page.department'"
       [index]="'department'">
     </ds-item-page-metadata-search-link>
+    <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let doi of object.metadata['dc.identifier.doi']|keyvalue">
+      <div class="simple-view-element">
+        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.doi" | translate}}</h2>
+        <div class="simple-view-element-body">
+          <a class="dont-break-out" href="https://doi.org/{{doi.value.value}}" target="_blank">{{doi.value.value}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let url of object.metadata['dc.relation.uri']|keyvalue">
+      <div class="simple-view-element">
+        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.external-url" | translate}}</h2>
+        <div class="simple-view-element-body">
+          <a class="dont-break-out" href="{{url.value.value}}" target="_blank">{{ parseUrl(url.value.value) }}</a>
+        </div>
+      </div>
+    </div>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <ds-item-page-uri-field [item]="object"
       [fields]="['coar.notify.endorsedBy']"
