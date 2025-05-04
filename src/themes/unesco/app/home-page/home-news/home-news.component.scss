@@ -3,11 +3,72 @@
 }
 
 .display-3 {
-    word-break: break-word;
+  word-break: break-word;
+  color: white; // Ensures readability
 }
 
 .jumbotron {
-  background-color: var(--ds-home-news-background-color);
+  position: relative;
+  height: 100%;
+  color: white;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.slide-image.active {
+  opacity: 1;
+}
+
+.container, .photo-credit, .slide-controls {
+  position: relative;
+  z-index: 2;
+}
+
+.photo-credit {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.85rem;
+  color: #ddd;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+}
+
+.slide-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.slide-controls button {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  pointer-events: auto;
+  border-radius: 0.3rem;
 }
 
 a {
