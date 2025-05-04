@@ -22,7 +22,15 @@
     </ul>
   </div>
   <div class="photo-credit">
-    📷 Credit: {{ currentCredit }}
+    📷 Credit:
+    <ng-container *ngIf="slides[currentSlide].link; else plainCredit">
+      <a [href]="slides[currentSlide].link" target="_blank" rel="noopener noreferrer">
+        {{ slides[currentSlide].credit }} 🔗
+      </a>
+    </ng-container>
+    <ng-template #plainCredit>
+      {{ slides[currentSlide].credit }}
+    </ng-template>
   </div>
   <div class="slide-controls">
     <button (click)="previousSlide()">‹</button>

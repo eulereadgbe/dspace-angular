@@ -48,6 +48,19 @@
   border-radius: 0.3rem;
 }
 
+.photo-credit a {
+  color: #ddd; // or your preferred muted link color
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px dotted #bbb; // subtle underline effect
+  transition: color 0.3s ease;
+}
+
+.photo-credit a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .slide-controls {
   position: absolute;
   top: 50%;
