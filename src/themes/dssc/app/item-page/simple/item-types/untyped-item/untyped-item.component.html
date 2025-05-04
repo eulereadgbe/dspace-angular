@@ -24,7 +24,25 @@
     <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
       <ds-media-viewer [item]="object"></ds-media-viewer>
     </div>
-    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    <ng-container *ngIf="object?.metadata['dc.relation.uri'] && (object.metadata['dc.relation.uri'] | keyvalue)?.length; else originalFileSection">
+      <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let url of object.metadata['dc.relation.uri'] | keyvalue">
+        <div class="simple-view-element">
+          <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{ 'item.page.external-url' | translate }}</h2>
+          <div class="simple-view-element-body">
+            <a class="dont-break-out"
+               [href]="url.value.value"
+               target="_blank"
+               [ngbTooltip]="'item.page.external-url-tooltip' | translate">
+              {{ parseUrl(url.value.value) }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #originalFileSection>
+      <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    </ng-template>
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
     <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
       [parentItem]="object"
@@ -133,14 +151,6 @@
         <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.doi" | translate}}</h2>
         <div class="simple-view-element-body">
           <a class="dont-break-out" href="https://doi.org/{{doi.value.value}}" target="_blank">{{doi.value.value}}</a>
-        </div>
-      </div>
-    </div>
-    <div class="item-page-field" style="margin-bottom: 15px;" *ngFor="let url of object.metadata['dc.relation.uri']|keyvalue">
-      <div class="simple-view-element">
-        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{"item.page.external-url" | translate}}</h2>
-        <div class="simple-view-element-body">
-          <a class="dont-break-out" href="{{url.value.value}}" target="_blank">{{ parseUrl(url.value.value) }}</a>
         </div>
       </div>
     </div>
