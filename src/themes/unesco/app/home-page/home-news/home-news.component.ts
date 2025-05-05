@@ -18,29 +18,20 @@ import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page
 export class HomeNewsComponent implements OnInit {
   slides = [
     {
-      image: '/assets/unesco/images/home-news/banner1.webp',
-      credit: 'Gregory Piper / Ocean Image Bank',
-      link: 'https://www.theoceanagency.org/search-result?img=YHc69BMAACMArtvv'
+      image: '/assets/unesco/images/banner1.jpg',
+      credit: 'Gregory Piper / Ocean Image Bank'
     },
     {
-      image: '/assets/unesco/images/home-news/banner2.webp',
-      credit: 'Alex Tyrrell / Ocean Image Bank',
-      link: 'https://www.theoceanagency.org/search-result?img=YEgD9BEAACIAqMSi'
+      image: '/assets/unesco/images/banner2.jpg',
+      credit: 'Alex Tyrrell / Ocean Image Bank'
     },
     {
-      image: '/assets/unesco/images/home-news/banner3.webp',
-      credit: 'Liang Fu / Ocean Image Bank',
-      link: 'https://www.theoceanagency.org/search-result?img=YGXmIBMAACAAYN4S'
+      image: '/assets/unesco/images/banner3.jpg',
+      credit: 'Liang Fu / Ocean Image Bank'
     },
     {
-      image: '/assets/unesco/images/home-news/banner4.webp',
-      credit: 'Jayne Jenkins / Ocean Image Bank',
-      link: 'https://www.theoceanagency.org/search-result?img=YHTveRMAACAApIuf'
-    },
-    {
-      image: '/assets/unesco/images/home-news/banner5.webp',
-      credit: 'Ocean Image Bank',
-      link: 'https://www.theoceanagency.org/search-result?img=YGD5KhIAACAAmO_q'
+      image: '/assets/unesco/images/banner4.jpg',
+      credit: 'Jayne Jenkins / Ocean Image Bank'
     }
   ];
 
@@ -58,7 +49,7 @@ export class HomeNewsComponent implements OnInit {
     startAutoPlay(): void {
       this.slideshowIntervalId = setInterval(() => {
         this.nextSlide(false); // false: don't reset the timer from auto-play
-      }, 10000); // 10 seconds
+      }, 3000); // 3 seconds
     }
 
     nextSlide(resetTimer: boolean = true): void {
