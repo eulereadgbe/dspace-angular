@@ -1,9 +1,4 @@
 <div class="jumbotron jumbotron-fluid mt-ncs">
-  <div *ngFor="let slide of slides; let i = index"
-       class="slide-image"
-       [class.active]="i === currentSlide"
-       [ngStyle]="{'background-image': 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(' + slide.image + ')'}">
-  </div>
   <div class="container">
     <div class="d-flex flex-wrap">
       <div>
@@ -20,12 +15,5 @@
       <li>Disseminate and promote these publications, reports, policies, and other documents on the initiatives and actions to address the Ocean Decade challenge
       </li>
     </ul>
-  </div>
-  <div class="photo-credit">
-    📷 Credit: {{ currentCredit }}
-  </div>
-  <div class="slide-controls">
-    <button (click)="previousSlide()">‹</button>
-    <button (click)="nextSlide()">›</button>
   </div>
 </div>
