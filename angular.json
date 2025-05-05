@@ -41,11 +41,6 @@
             "aot": true,
             "assets": [
               "src/assets",
-              {
-                "glob": "**/*",
-                "input": "src/themes/unesco/assets",
-                "output": "assets/unesco/"
-              },
               "src/robots.txt"
             ],
             "styles": [

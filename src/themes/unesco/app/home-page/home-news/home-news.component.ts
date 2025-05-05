@@ -18,27 +18,27 @@ import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page
 export class HomeNewsComponent implements OnInit {
   slides = [
     {
-      image: 'assets/unesco/images/home-news/banner1.webp',
+      image: '/assets/unesco/images/home-news/banner1.webp',
       credit: 'Gregory Piper / Ocean Image Bank',
       link: 'https://www.theoceanagency.org/search-result?img=YHc69BMAACMArtvv'
     },
     {
-      image: 'assets/unesco/images/home-news/banner2.webp',
+      image: '/assets/unesco/images/home-news/banner2.webp',
       credit: 'Alex Tyrrell / Ocean Image Bank',
       link: 'https://www.theoceanagency.org/search-result?img=YEgD9BEAACIAqMSi'
     },
     {
-      image: 'assets/unesco/images/home-news/banner3.webp',
+      image: '/assets/unesco/images/home-news/banner3.webp',
       credit: 'Liang Fu / Ocean Image Bank',
       link: 'https://www.theoceanagency.org/search-result?img=YGXmIBMAACAAYN4S'
     },
     {
-      image: 'assets/unesco/images/home-news/banner4.webp',
+      image: '/assets/unesco/images/home-news/banner4.webp',
       credit: 'Jayne Jenkins / Ocean Image Bank',
       link: 'https://www.theoceanagency.org/search-result?img=YHTveRMAACAApIuf'
     },
     {
-      image: 'assets/unesco/images/home-news/banner5.webp',
+      image: '/assets/unesco/images/home-news/banner5.webp',
       credit: 'Ocean Image Bank',
       link: 'https://www.theoceanagency.org/search-result?img=YGD5KhIAACAAmO_q'
     }
