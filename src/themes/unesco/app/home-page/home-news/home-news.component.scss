@@ -1,59 +1,26 @@
 :host {
-    display: block;
+  display: block;
 }
 
 .display-3 {
-    word-break: break-word;
+  word-break: break-word;
 }
 
 .jumbotron {
   position: relative;
-  height: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed for the banner height */
   color: white;
   padding: 4rem 2rem;
   overflow: hidden;
   background-color: var(--ds-home-news-background-color);
 }
 
-.slide-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.static-banner {
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 1;
-
-  .image-container {
-    width: 100%;
-    height: 100%;
-
-    picture {
-      display: block;
-      width: 100%;
-      height: 100%;
-
-      source,
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Maintain aspect ratio and cover the container */
-      }
-    }
-  }
-
-  &.active {
-    opacity: 1;
-  }
 }
 
-.container,
-.photo-credit,
-.slide-controls {
+.container {
   position: relative;
   z-index: 2;
 }
@@ -72,6 +39,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   padding: 0.3rem 0.6rem;
   border-radius: 0.3rem;
+  z-index: 2; /* Ensure it's above the background image */
 
   a {
     color: #ddd;
@@ -84,29 +52,6 @@
       color: #fff;
       text-decoration: underline;
     }
-  }
-}
-
-.slide-controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
-  transform: translateY(-50%);
-  pointer-events: none;
-
-  button {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    pointer-events: auto;
-    border-radius: 0.3rem;
   }
 }
 
