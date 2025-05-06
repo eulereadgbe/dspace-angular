@@ -15,7 +15,8 @@
     border: none;
     color: var(--ds-header-icon-color);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: var(--ds-header-icon-color-hover);
     }
 
@@ -45,6 +46,13 @@
     margin: 8px 0 0 53px;
   }
 
+  .headerInfoName,
+  .headerInfoText {
+    color: #7B1113;
+    white-space: nowrap !important;
+    display: block;
+  }
+
   .headerInfoName {
     font-weight: bold;
     font-size: xx-large;
@@ -59,32 +67,43 @@
     font-family: "Open Sans";
   }
 
-  .headerInfoName, .headerInfoText {
-    color: #7B1113;
-    white-space: nowrap !important;
+  // Specific visibility control
+  .headerInfoNameText .short-name {
+    display: none;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: Marcellus;
+  }
+
+  @media screen and (max-width: 768px) {
+    .headerInfoNameText .full-name {
+      display: none;
+    }
+
+    .headerInfoNameText .short-name {
+      display: inline;
+    }
+
+    .headerInfoText {
+      font-size: smaller;
+    }
+
+    .headerInfoName {
+      font-size: xx-large;
+    }
   }
 
   span {
     display: block;
-    //margin-top: 4vw;
   }
 
-header .navbar-brand .upv-logo img {
-  border-right: 1.5px solid #7B1113;
-  padding-right: 5px;
-  float: left;
-}
+  header .navbar-brand .upv-logo img {
+    border-right: 1.5px solid #7B1113;
+    padding-right: 5px;
+    float: left;
+  }
 
-header .navbar-brand .diuaa-logo img {
-  padding-left: 5px;
-}
-
-@media screen and (max-width: map-get($grid-breakpoints, lg)-0.02) {
-    .headerInfoText {
-    font-size: smaller;
-    }
-    .headerInfoName {
-    font-size: xx-large;
-    }
+  header .navbar-brand .upv-dr-logo img {
+    padding-left: 5px;
   }
 }
