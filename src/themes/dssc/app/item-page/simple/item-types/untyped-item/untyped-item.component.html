@@ -50,6 +50,16 @@
       [metadataFields]="['dc.contributor.author', 'dc.creator']"
       [label]="'relationships.isAuthorOf' | translate">
     </ds-metadata-representation-list>
+    <div class="item-page-field" style="margin-bottom: 15px;" *ngIf="object.metadata['dc.contributor.editor'] && object.metadata['dc.contributor.editor'].length > 0">
+      <div class="simple-view-element">
+        <h2 class="simple-view-element-header" style="font-size: 1.25rem;">{{'item.page.editor' | translate}}</h2>
+        <div class="simple-view-element-body">
+          <div *ngFor="let editor of object.metadata['dc.contributor.editor']">
+            <span class="dont-break-out">{{editor.value}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.title']"
       [label]="'item.page.journal-title'">
