@@ -22,12 +22,18 @@
       <span *ngIf="linkType === linkTypes.None" class="lead item-list-title dont-break-out"
             [innerHTML]="dsoTitle"></span>
       <span class="text-muted">
-        <ds-truncatable-part [id]="dso.id" [minLines]="1">
+        <ds-truncatable-part [id]="dso.id" [minLines]="2">
           <ng-container *ngIf="dso.firstMetadataValue('dc.publisher') || dso.firstMetadataValue('dc.date.issued')">
             <span *ngIf="dso.allMetadata(['dc.contributor.author', 'dc.creator']).length > 0" class="item-list-authors">
               <span *ngFor="let author of allMetadataValues(['dc.contributor.author', 'dc.creator']); let last=last;">
                 <span [innerHTML]="author"><span [innerHTML]="author"></span></span>
                 <span *ngIf="!last">; </span>
+              </span>
+            </span>
+            <!-- Show editors if no authors -->
+            <span *ngIf="dso.allMetadata(['dc.contributor.author', 'dc.creator']).length === 0 && dso.allMetadata(['dc.contributor.editor']).length > 0" class="item-list-editors">
+              <span *ngFor="let editor of allMetadataValues(['dc.contributor.editor']); let last=last;">
+                <span [innerHTML]="editor"></span><span *ngIf="!last">; </span>
               </span>
             </span>
             (<span *ngIf="dso.firstMetadataValue('dc.publisher')" class="item-list-publisher" [innerHTML]="firstMetadataValue('dc.publisher')"></span>
@@ -36,6 +42,11 @@
           </ng-container>
         </ds-truncatable-part>
       </span>
+      <div *ngIf="!dso.firstMetadataValue('dc.description.abstract') && dso.firstMetadataValue('dc.description')" class="item-list-description">
+        <ds-truncatable-part [id]="dso.id" [minLines]="3"><span
+          [innerHTML]="firstMetadataValue('dc.description')"></span>
+        </ds-truncatable-part>
+      </div>
       <div *ngIf="dso.firstMetadataValue('dc.description.abstract')" class="item-list-abstract">
         <ds-truncatable-part [id]="dso.id" [minLines]="3"><span
           [innerHTML]="firstMetadataValue('dc.description.abstract')"></span>
