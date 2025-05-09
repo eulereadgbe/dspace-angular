@@ -164,6 +164,10 @@
         </div>
       </div>
     </div>
+    <ds-generic-item-page-field [item]="object"
+                                [fields]="['dcterms.accrualPeriodicity']"
+                                [label]="'item.page.frequency'">
+    </ds-generic-item-page-field>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <ds-item-page-uri-field [item]="object"
       [fields]="['coar.notify.endorsedBy']"
