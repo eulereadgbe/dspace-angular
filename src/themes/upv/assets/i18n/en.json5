@@ -75,5 +75,7 @@
   "item.page.degree.grantor": "Degree Grantor",
   "item.page.discipline": "Discipline",
   "item.page.degree": "Degree",
-  "item.page.department": "Department"
+  "item.page.department": "Department",
+  "item.page.external-url": "View/Download",
+  "item.page.external-url-tooltip": "External link to view/download this item"
 }
