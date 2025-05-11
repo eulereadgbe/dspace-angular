@@ -35,6 +35,8 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
 import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/sdg/item-page-sdg-field.component';
 import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/metadata-search-link/item-page-metadata-search-link-field.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { ItemPageAltmetricFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/altmetric/item-page-altmetric-field.component';
+import { ItemPageDimensionsFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/dimensions/item-page-dimensions-field.component';
 
 /**
  * Component that represents an untyped Item page
@@ -76,6 +78,8 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
     KeyValuePipe,
     NgForOf,
     NgbTooltipModule,
+    ItemPageAltmetricFieldComponent,
+    ItemPageDimensionsFieldComponent,
   ],
 })
 export class UntypedItemComponent extends BaseComponent {
