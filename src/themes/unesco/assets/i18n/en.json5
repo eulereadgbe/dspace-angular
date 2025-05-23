@@ -49,5 +49,6 @@
   "search.filters.filter.odc.head": "Ocean Decade Challenges",
   "search.filters.filter.odc.label": "Search Ocean Decade Challenges",
   "search.filters.filter.odc.placeholder": "Ocean Decade Challenges",
-  "search.filters.applied.f.odc": "Ocean Decade Challenge"
+  "search.filters.applied.f.odc": "Ocean Decade Challenge",
+  "item.page.excerpt": "Excerpt"
 }
