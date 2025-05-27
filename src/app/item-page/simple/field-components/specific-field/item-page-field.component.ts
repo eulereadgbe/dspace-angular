@@ -87,7 +87,8 @@ export class ItemPageFieldComponent {
   shouldJustifyFields(fields: string[]): boolean {
     return fields.some(field =>
       field.startsWith('dc.description.') ||
-      field === 'dc.description' // Explicitly check for 'dc.description'
+      field === 'dc.description' || // Explicitly check for 'dc.description'
+      field === 'local.description'
     );
   }
 }
