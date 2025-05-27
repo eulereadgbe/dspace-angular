@@ -50,5 +50,15 @@
   "search.filters.filter.odc.label": "Search Ocean Decade Challenges",
   "search.filters.filter.odc.placeholder": "Ocean Decade Challenges",
   "search.filters.applied.f.odc": "Ocean Decade Challenge",
-  "item.page.excerpt": "Excerpt"
+  "item.page.excerpt": "Excerpt",
+  "item.page.subject.personalname": "Person as subject",
+  "search.filters.filter.person_as_subject.head": "Person as subject",
+  "search.filters.filter.person_as_subject.label": "Search Person as subject",
+  "search.filters.applied.f.person_as_subject": "Person as subject",
+  "search.filters.filter.person_as_subject.placeholder": "Person as subject",
+  "item.page.subject.corporatename": "Corporate body as subject",
+  "search.filters.filter.corporate_as_subject.head": "Corporate body as subject",
+  "search.filters.filter.corporate_as_subject.label": "Search Corporate body as subject",
+  "search.filters.applied.f.corporate_as_subject": "Corporate body as subject",
+  "search.filters.filter.corporate_as_subject.placeholder": "Corporate body"
 }

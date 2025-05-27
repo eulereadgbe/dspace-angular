@@ -125,6 +125,18 @@
       [separator]="'; '"
       [label]="'item.page.subject.lcsh'">
     </ds-generic-item-page-field>
+    <ds-item-page-metadata-search-link [item]="object"
+                                       [fields]="['local.subject.personalname']"
+                                       [separator]="'; '"
+                                       [label]="'item.page.subject.personalname'"
+                                       [index]="'person_as_subject'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
+                                       [fields]="['local.subject.corporatename']"
+                                       [separator]="'; '"
+                                       [label]="'item.page.subject.corporatename'"
+                                       [index]="'corporate_as_subject'">
+    </ds-item-page-metadata-search-link>
     <ds-item-page-sdg-field
       [item]="object"
       [fields]="['dc.subject.sdg']"
