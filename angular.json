@@ -55,6 +55,11 @@
                 "bundleName": "custom-theme"
               },
               {
+                "input": "src/themes/plai/styles/theme.scss",
+                "inject": false,
+                "bundleName": "plai-theme"
+              },
+              {
                 "input": "src/themes/dspace/styles/theme.scss",
                 "inject": false,
                 "bundleName": "dspace-theme"
