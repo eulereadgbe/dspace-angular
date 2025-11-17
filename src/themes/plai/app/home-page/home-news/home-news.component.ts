@@ -4,8 +4,8 @@ import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page
 
 @Component({
   selector: 'ds-themed-home-news',
-  // styleUrls: ['./home-news.component.scss'],
-  styleUrls: ['../../../../../app/home-page/home-news/home-news.component.scss'],
+  styleUrls: ['./home-news.component.scss'],
+  // styleUrls: ['../../../../../app/home-page/home-news/home-news.component.scss'],
   templateUrl: './home-news.component.html',
   standalone: true,
 })

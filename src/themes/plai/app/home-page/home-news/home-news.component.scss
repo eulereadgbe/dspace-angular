@@ -1,79 +1,94 @@
 :host {
   display: block;
+}
 
-  div.background-image-container {
-    color: white;
-    position: relative;
-    font-weight: 600;
+.display-3 {
+  word-break: break-word;
+}
 
-    .background-image > img {
-      background-color: var(--bs-info);
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-    }
+.home-news-content {
+  position: relative; // Establish a positioning context for absolute children
+  overflow: hidden; // Ensures nothing spills outside the content area
 
-    .container {
-      position: relative;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  // Set default text color for all content within this block to white
+  color: white;
+  // Make the background of the content area transparent to see the image
+  background-color: transparent;
+  // Add a subtle text shadow for better pop against the background
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 
-      &:before, &:after {
-        content: '';
-        display: block;
-        width: var(--ds-banner-background-gradient-width);
-        height: 100%;
-        top: 0;
-        position: absolute;
-      }
+  // Add padding to ensure content isn't flush with edges
+  // The py-4 px-2 classes from HTML are still important here
+}
 
-      &:before {
-        background: linear-gradient(to left, var(--ds-banner-text-background), transparent);
-        left: calc(-1 * var(--ds-banner-background-gradient-width));
+/* ---------------------------------------------
+   Styles for the actual background image
+   --------------------------------------------- */
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // Ensures the image covers the entire container without distortion
+  object-position: center; // Centers the image within the container
+  z-index: -2; // Pushes the image to the very back
+}
 
-      }
+/* ---------------------------------------------
+   Styles for the Dark Overlay (Crucial for Readability)
+   --------------------------------------------- */
+.readability-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // Semi-transparent black overlay. Adjust the '0.5' (alpha) value:
+  // 0.1 for very subtle, 0.7 for quite dark, 0.8 for almost opaque
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1; // Positioned behind the text but in front of the background image
+}
 
-      &:after {
-        background: linear-gradient(to right, var(--ds-banner-text-background), transparent);
-        right: calc(-1 * var(--ds-banner-background-gradient-width));
-      }
+/* ---------------------------------------------
+   Styles for the text content itself
+   --------------------------------------------- */
+.text-content {
+  position: relative; // Ensures this container is above the background/overlay
+  z-index: 1; // Explicitly set a higher z-index for the text content
+}
 
-      background-color: var(--ds-banner-text-background);
-    }
+/* ---------------------------------------------
+   Link styles (modified for visibility on a dark background)
+   --------------------------------------------- */
+a {
+  // Use a light, contrasting color for links.
+  // #ADD8E6 is a light blue, good for dark backgrounds.
+  color: var(--ds-home-news-link-color, #ADD8E6);
+  text-decoration: underline; // Ensure links are clearly identifiable
 
-
-    small.credits {
-      a {
-        color: inherit;
-      }
-
-      opacity: 0.3;
-      position: absolute;
-      right: var(--bs-spacer);
-      bottom: 0;
-    }
-  }
-
-  .home-news-content {
-    background-color: transparent;
-  }
-
-  a {
-    color: var(--ds-home-news-link-color);
-
-    &:hover {
-      color: var(--ds-home-news-link-hover-color);
-    }
-  }
-
-  .lead {
-    font-size: 1.25rem;
-    font-weight: 400;
+  &:hover {
+    color: var(--ds-home-news-link-hover-color, #FFFFFF); // White on hover
+    text-decoration: none; // Optional: remove underline on hover
   }
 }
 
+.title-stack {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin-bottom: 0;
 
+  .baybayin-script {
+    font-family: 'Noto Sans Tagalog', sans-serif !important;
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .roman-text {
+    font-family: sans-serif;
+    font-size: 0.6em;
+    font-weight: 300;
+    margin: -0.25em 0 0 0; // Pull closer to Baybayin script
+  }
+}
