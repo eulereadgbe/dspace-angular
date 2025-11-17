@@ -13,6 +13,8 @@ import { StoreModule } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
+import { LoginPageComponent } from './app/login-page/login-page.component';
+import { LogoutPageComponent } from './app/logout-page/logout-page.component';
 
 import { RootModule } from '../../app/root.module';
 
@@ -33,6 +35,8 @@ const DECLARATIONS = [
     StoreRouterConnectingModule,
     TranslateModule,
     FormsModule,
+    LoginPageComponent,
+    LogoutPageComponent,
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
