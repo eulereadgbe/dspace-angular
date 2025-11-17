@@ -1,0 +1,19 @@
+{
+  // DSpace default: "All of DSpace"
+  "menu.section.browse_global": "Browse iLAMPARA",
+
+  // DSpace default: "DSpace Angular :: "
+  "repository.title.prefix": "iLAMPARA :: ",
+  "dso-selector.set-scope.community.button": "Search all of iLAMPARA",
+  "home.top-level-communities.head": "Collections in iLAMPARA",
+  "info.feedback.info": "Thanks for sharing your feedback about the iLAMPARA. Your comments are appreciated!",
+  "login.form.header": "Please log in to iLAMPARA",
+  "logout.form.header": "Log out from iLAMPARA",
+  "nav.browse.header": "All of iLAMPARA",
+  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to iLAMPARA.",
+  "repository.title": "Digital and Institutional UPV Academic Archives",
+  "search.form.scope.all": "All of iLAMPARA",
+  "title": "iLAMPARA",
+  "menu.header.iLAMPARA.logo": "iLAMPARA Logo",
+  "menu.section.browse_global_communities_and_collections": "Collections"
+}
