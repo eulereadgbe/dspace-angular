@@ -12,6 +12,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
 
 import { RootModule } from '../../app/root.module';
 
