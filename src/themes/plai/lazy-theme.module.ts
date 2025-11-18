@@ -15,6 +15,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
 import { LogoutPageComponent } from './app/logout-page/logout-page.component';
+import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
 
 import { RootModule } from '../../app/root.module';
 
@@ -37,6 +38,7 @@ const DECLARATIONS = [
     FormsModule,
     LoginPageComponent,
     LogoutPageComponent,
+    AuthNavMenuComponent,
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
