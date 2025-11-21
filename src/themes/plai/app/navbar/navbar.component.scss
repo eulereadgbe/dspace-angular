@@ -5,7 +5,8 @@
     background-color: #f7f8f9;
     align-items: baseline;
     padding: 0;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px -10px rgba(0,0,0,.17);
+    border-bottom: none !important;
   }
 
   /** Mobile menu styling **/
@@ -20,7 +21,7 @@
       &.open {
         height: auto;
         min-height: 100vh; //doesn't matter because wrapper is sticky
-        border-bottom: 1px var(--ds-header-navbar-border-bottom-color) solid; // open navbar covers header-navbar-wrapper border
+        border-bottom: none !important;
       }
     }
   }

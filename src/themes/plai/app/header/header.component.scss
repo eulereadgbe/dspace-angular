@@ -5,6 +5,9 @@
   header {
     background-color: white;
     padding: var(--bs-gutter-x) 0; // Vertical padding for overall spacing
+    box-shadow: 0 10px 6px #0000000a;
+    z-index: 1;
+    position: relative;
   }
 
   // --- Main Header Row Layout (Mobile-First) ---
