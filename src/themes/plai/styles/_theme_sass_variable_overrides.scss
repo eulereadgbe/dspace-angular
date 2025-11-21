@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Noto+Sans+Tagalog&family=Merriweather&display=swap');
 // Bootswatch Sass variable overrides (must come first)
 @import './bootswatch/variables';
 // DSpace works with CSS variables for its own components, and has a mapping of all bootstrap Sass
@@ -31,6 +31,18 @@
 
 // Add new semantic colors here (you don't need to add existing semantic colors)
 @import '../../../styles/_variables.scss';
+// Define the specific font stacks for your theme
+$font-family-title:           'Merriweather', Georgia, "Times New Roman", Times, serif !default;
+$font-family-tagalog:         'Noto Sans Tagalog', $font-family-sans-serif !default;
+$font-family-body:            'Source Sans Pro', $font-family-sans-serif !default;
+
+// Override Bootstrap/DSpace variables to apply the new fonts
+
+// Body and general UI text
+$font-family-sans-serif:      $font-family-body !default;
+
+// All titles (H1-H6)
+$headings-font-family:        $font-family-title !default;
 $theme-custom-semantic-colors: (
 );
 $theme-colors: map-merge($theme-colors, $theme-custom-semantic-colors);

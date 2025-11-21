@@ -6,7 +6,7 @@
     background-color: white;
     padding: var(--bs-gutter-x) 0; // Vertical padding for overall spacing
     box-shadow: 0 10px 6px #0000000a;
-    z-index: 1;
+    z-index: 2;
     position: relative;
   }
 
@@ -45,7 +45,7 @@
 
   // Style for the "iLAMPARA" Baybayin text
   .ilm-text {
-    font-family: 'Noto Sans Tagalog', sans-serif; // Apply the Baybayin font
+    font-family: var(--bs-font-tagalog) !important; // Apply the Baybayin font
     font-size: 1.5rem; // Compact font size for mobile
     font-weight: 700;
     color: var(--ds-header-color, #003768);
