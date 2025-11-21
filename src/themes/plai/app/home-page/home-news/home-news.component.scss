@@ -19,20 +19,11 @@
 
   // Add padding to ensure content isn't flush with edges
   // The py-4 px-2 classes from HTML are still important here
-}
-
-/* ---------------------------------------------
-   Styles for the actual background image
-   --------------------------------------------- */
-.background-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; // Ensures the image covers the entire container without distortion
-  object-position: center; // Centers the image within the container
-  z-index: -2; // Pushes the image to the very back
+	background-image: url('../../../assets/images/home-news/iLAMPARA-background-image.webp');
+	background-size: cover;
+	background-position: center 60%;
+	background-repeat: no-repeat;
+	z-index: -2;
 }
 
 /* ---------------------------------------------
