@@ -2,3 +2,6 @@
 
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
+   button.dropdown-item.active > ul > li.text-primary {
+    color: $white !important;
+  }
