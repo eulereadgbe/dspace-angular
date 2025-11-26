@@ -36,17 +36,6 @@
         }
         <span class="text-muted">
           <ds-truncatable-part [id]="dso.id" [minLines]="1">
-            @if (dso.firstMetadataValue('dc.publisher') || dso.firstMetadataValue('dc.date.issued')) {
-              (@if (dso.firstMetadataValue('dc.publisher')) {
-              <span class="item-list-publisher" [innerHTML]="firstMetadataValue('dc.publisher')"></span>
-            }
-            @if (dso.firstMetadataValue('dc.publisher') && dso.firstMetadataValue('dc.date.issued')) {
-              <span>, </span>
-            }
-            @if (dso.firstMetadataValue('dc.date.issued')) {
-              <span class="item-list-date" [innerHTML]="firstMetadataValue('dc.date.issued')"></span>
-              })
-            }
             @if (dso.allMetadata(['dc.contributor.author', 'dc.creator', 'dc.contributor.*']).length > 0) {
               <span class="item-list-authors">
                 @for (author of allMetadataValues(['dc.contributor.author', 'dc.creator', 'dc.contributor.*']); track author; let last = $last) {
@@ -58,6 +47,17 @@
                   </span>
                 }
               </span>
+            }
+            @if (dso.firstMetadataValue('dc.publisher') || dso.firstMetadataValue('dc.date.issued')) {
+              (@if (dso.firstMetadataValue('dc.publisher')) {
+              <span class="item-list-publisher" [innerHTML]="firstMetadataValue('dc.publisher')"></span>
+            }
+            @if (dso.firstMetadataValue('dc.publisher') && dso.firstMetadataValue('dc.date.issued')) {
+              <span>, </span>
+            }
+            @if (dso.firstMetadataValue('dc.date.issued')) {
+              <span class="item-list-date" [innerHTML]="firstMetadataValue('dc.date.issued')"></span>
+              })
             }
           </ds-truncatable-part>
         </span>
