@@ -63,9 +63,14 @@
     </ds-generic-item-page-field>
 
     <ds-generic-item-page-field [item]="object"
-      [fields]="['local.subject', 'dc.subject']"
+      [fields]="['local.subject']"
       [separator]="'; '"
       [label]="'item.page.subject'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.subject']"
+      [separator]="'; '"
+      [label]="'item.page.unesco-keyword'">
     </ds-generic-item-page-field>
     <ds-item-page-sdg-field
       [item]="object"
