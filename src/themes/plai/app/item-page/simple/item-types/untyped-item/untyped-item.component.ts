@@ -1,4 +1,4 @@
-import { AsyncPipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -28,6 +28,7 @@ import { listableObjectComponent } from '../../../../../../../app/shared/object-
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/sdg/item-page-sdg-field.component';
+import { OrcidBadgeComponent } from '../../../../shared/components/orcid-badge/orcid-badge.component';
 
 @listableObjectComponent(Item, ViewMode.StandalonePage, Context.Any, 'plai')
 @Component({
@@ -41,7 +42,7 @@ import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/si
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
-    AsyncPipe,
+    CommonModule,
     CollectionsComponent,
     DsoEditMenuComponent,
     GenericItemPageFieldComponent,
@@ -61,6 +62,7 @@ import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/si
     ThemedThumbnailComponent,
     TranslateModule,
     ItemPageSdgFieldComponent,
+    OrcidBadgeComponent,
   ],
 })
 export class UntypedItemComponent extends BaseComponent {

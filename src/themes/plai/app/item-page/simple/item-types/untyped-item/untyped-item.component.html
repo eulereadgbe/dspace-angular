@@ -32,12 +32,22 @@
     }
     <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
-    <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
+    <!-- <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
       [parentItem]="object"
       [itemType]="'Person'"
       [metadataFields]="['dc.contributor.author', 'dc.creator']"
       [label]="'item.page.authors' | translate">
-    </ds-metadata-representation-list>
+    </ds-metadata-representation-list> -->
+    <ds-metadata-field-wrapper [label]="'item.page.authors' | translate">
+      <ng-container *ngIf="object?.metadata?.['dc.contributor.author'] as authors">
+        <div *ngFor="let m of authors; let i = index" class="d-block">
+          <span class="d-inline-flex align-items-center">
+            <span>{{ m.value }}</span>
+            <plai-orcid-badge class="ms-1" [authorityId]="m.authority"></plai-orcid-badge>
+          </span>
+        </div>
+      </ng-container>
+    </ds-metadata-field-wrapper>
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.title']"
       [label]="'item.page.journal-title'">

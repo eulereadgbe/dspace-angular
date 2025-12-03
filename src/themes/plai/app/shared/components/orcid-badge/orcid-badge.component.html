@@ -1,0 +1,9 @@
+<ng-container *ngIf="orcid">
+  <span class="orcid-badge"
+        ngbTooltip="{{ orcid }}"
+        placement="top">
+    <a [href]="'https://orcid.org/' + orcid" target="_blank" rel="noopener noreferrer">
+      <img src="assets/plai/images/orcid-icon.svg" alt="ORCID" style="height:1em; vertical-align:middle; margin-right:.25rem">
+    </a>
+  </span>
+</ng-container>

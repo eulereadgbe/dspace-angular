@@ -16,6 +16,7 @@ import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
 import { LogoutPageComponent } from './app/logout-page/logout-page.component';
 import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
+import { OrcidBadgeComponent } from './app/shared/components/orcid-badge/orcid-badge.component';
 
 import { RootModule } from '../../app/root.module';
 
@@ -39,6 +40,7 @@ const DECLARATIONS = [
     LoginPageComponent,
     LogoutPageComponent,
     AuthNavMenuComponent,
+    OrcidBadgeComponent,
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
