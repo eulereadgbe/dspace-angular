@@ -5,3 +5,6 @@
    button.dropdown-item.active > ul > li.text-primary {
     color: $white !important;
   }
+ds-base-thumbnail > .thumbnail > img {
+	box-shadow: -1px 0 15px -6px #ccc;
+}
