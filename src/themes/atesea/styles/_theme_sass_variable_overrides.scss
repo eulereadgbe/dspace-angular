@@ -3,7 +3,11 @@
 // still uses Sass variables internally. So if you want to override bootstrap (or other sass
 // variables) you can do so here. Their CSS counterparts will include the changes you make here
 
-// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// 1. Define ATESEA Brand Colors (BEFORE importing 'variables')
+$primary: #5E2E8A;
+$headings-color: $primary;
+$font-family-sans-serif:      "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@import 'variables';
 //
 // $gray-700: #495057 !default;  // Bootstrap $gray-700
 // $gray-100: #f8f9fa !default;  //           $gray-100
