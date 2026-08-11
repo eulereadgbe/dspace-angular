@@ -3,9 +3,96 @@
     background-color: var(--ds-header-bg);
   }
 
-  .navbar-brand img {
-    max-height: var(--ds-header-logo-height);
-    max-width: 100%;
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #ffffff;
+    text-decoration: none;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    margin-right: 0.5rem;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+    }
+
+    img {
+      height: var(--ds-header-logo-height);
+      max-height: var(--ds-header-logo-height);
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .atesea-text {
+      color: #ffffff;
+      font-weight: 600;
+
+      /* --- ALL SCREENS ABOVE 359px: Middle vertical alignment & fluid font cap --- */
+      display: inline-flex;
+      align-items: center;
+      height: var(--ds-header-logo-height);
+
+      /* Fluid font sizing: Min 0.85rem, scales dynamically with viewport, Capped at max 1.25rem */
+      font-size: clamp(0.85rem, 1.2vw + 0.4rem, 1.25rem);
+      line-height: 1.2;
+
+      /* Keep on single line for tablets & desktop */
+      @media (min-width: 576px) {
+        white-space: nowrap;
+      }
+
+      /* Allow 2-line wrapped text (still centered vertically) for 360px - 575px */
+      @media (max-width: 575.98px) and (min-width: 360px) {
+        white-space: normal;
+        word-break: break-word;
+      }
+
+      /* --- 359px AND BELOW: Preserved 3-line top-to-bottom spanning layout --- */
+      @media (max-width: 359.98px) {
+        white-space: normal;
+        word-break: break-word;
+        max-width: 120px;
+
+        /* Distribute 3 lines evenly from top edge to bottom edge of logo */
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        font-size: calc(var(--ds-header-logo-height) * 0.26);
+        line-height: 1.1;
+      }
+    }
+  }
+
+  /* Prevent navbar icons container from shrinking */
+  .navbar {
+    flex-shrink: 0;
+  }
+
+  /* Replace "Log In" with Font Awesome user icon below 768px */
+  @media (max-width: 767.98px) {
+    ds-auth-nav-menu ::ng-deep {
+      a, button, .nav-link, .dropdown-toggle {
+        font-size: 0 !important;
+
+        &::before {
+          content: "\f2bd";
+          font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome";
+          font-weight: 900;
+          font-size: 1.1rem;
+          color: #ffffff;
+          display: inline-block;
+        }
+
+        span, div, .login-text {
+          display: none !important;
+        }
+      }
+    }
   }
 
   .navbar-toggler {
