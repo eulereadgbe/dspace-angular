@@ -1,0 +1,56 @@
+<div class="home-news-content py-4 px-2 py-sm-5 px-sm-0 mt-ncs mb-4 position-relative">
+
+  <!-- The Background Image -->
+  <img class="home-bg-image" src="assets/atesea/images/home-news/atesea-bg-image.png" alt="" aria-hidden="true">
+
+  @if (homeNewsMetadataValue$ | async; as homeNewsMetadataValue) {
+  <div class="container relative-container">
+    <div class="jumbotron jumbotron-fluid">
+      <ds-markdown-viewer [value]="homeNewsMetadataValue"></ds-markdown-viewer>
+    </div>
+  </div>
+  }
+  @else {
+  <div class="container relative-container">
+    <div class="content-wrapper">
+
+      <!-- HERO TITLE STYLING BLOCK -->
+      <div class="hero-header-block mb-4">
+        <h1 class="hero-title">
+          <span class="title-atesea">ATESEA</span>
+          <span class="title-institutional">INSTITUTIONAL</span>
+          <span class="title-repository">REPOSITORY</span>
+        </h1>
+        <p class="hero-subtitle">Connecting Scholars, Libraries, and Asian Theological Resources</p>
+      </div>
+
+      <p>
+        The Association for Theological Education in Southeast Asia (ATESEA) Institutional Repository is
+        the official digital repository of ATESEA and its members. Its goal is to support ATESEA’s mission of wider
+        cooperation among theological schools in research, consortium programs for advanced studies, and improving the
+        quality of theological education. This innovative program also supports the preservation and access to
+        publications, manuscripts, theses, and other academic works of member institutions’ theologians, faculty
+        members, and students.
+      </p>
+
+      <p class="mb-2">Particularly, it aims to:</p>
+
+      <ul class="mb-4">
+        <li>Serve as a union digital archive of ATESEA and its members’ theological education, advance studies, and research</li>
+        <li>Provide an online facility for its members to promote, exchange, and disseminate their academic and theological works globally</li>
+        <li>Share knowledge, support scholarship, and theological thinking with everyone</li>
+      </ul>
+
+      <p class="mb-0">
+        ATESEA member institutions engaged in training for Christian ministry in Southeast Asia, and Institutions
+        involved in theological education in Southeast Asia (Seminaries, Theological Schools, etc.) are invited to
+        contribute academic articles, theses, and dissertations to the ATESEA IR for global accessibility and visibility.
+        For members with existing IRs, metadata will be harvested from their repository into the ATESEA IR and linked to
+        the original source. For those who do not have the capacity to establish their own IR, they can directly deposit
+        the metadata and items to the ATESEA IR. ATESEA is committed to disseminating theological works while respecting
+        the intellectual property rights of faculty and institutions.
+      </p>
+    </div>
+  </div>
+  }
+</div>

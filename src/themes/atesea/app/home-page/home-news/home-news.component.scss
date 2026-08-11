@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Oswald:wght@700&display=swap');
+
+:host {
+    display: block;
+}
+
+.home-news-content {
+  background-color: var(--ds-home-news-background-color);
+  overflow: hidden;
+  color: #ffffff;
+
+  /* Create a semi-transparent dark overlay to mute bright image highlights */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 10, 38, 0.65);
+    z-index: 1;
+  }
+
+  /* Base styling for paragraphs and list items */
+  p, li {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.96;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+/* ==========================================================================
+   HERO TYPOGRAPHY STYLES (MATCHING ATTACHED IMAGE)
+   ========================================================================== */
+
+.hero-header-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.88; /* Tight line spacing to stack text closely like the graphic */
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+
+  /* 1. ATESEA: Wide, spaced-out sans-serif */
+  .title-atesea {
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    font-weight: 800;
+    letter-spacing: 0.28em; /* High tracking like the image */
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.15em;
+  }
+
+  /* 2. INSTITUTIONAL: Outlined tall font (replicating "DIGITAL") */
+  .title-institutional {
+    font-family: 'Oswald', 'Impact', 'Arial Narrow', sans-serif-condensed, sans-serif;
+    font-size: clamp(3.2rem, 8.5vw, 6.2rem);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+
+    /* Creates the hollow white outline effect */
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-text-stroke: 2px #ffffff;
+
+    text-shadow: none !important; /* Disables shadow so inner transparency stays clean */
+  }
+
+  /* 3. REPOSITORY: Bold tall solid font */
+  .title-repository {
+    font-family: 'Oswald', 'Impact', 'Arial Narrow', sans-serif-condensed, sans-serif;
+    font-size: clamp(3rem, 8vw, 5.8rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #ffffff !important;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Tagline / Subtitle below the title */
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  font-weight: 700;
+  color: #ffffff !important;
+  letter-spacing: 0.03em;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   LAYOUT & CONTAINERS
+   ========================================================================== */
+
+/* Constrain line length for body text */
+.content-wrapper {
+  max-width: 920px;
+  margin: 0;
+}
+
+/* Background Image styling */
+.home-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Content Container above overlay */
+.relative-container {
+  position: relative;
+  z-index: 2;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+a {
+  color: var(--ds-home-news-link-color);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--ds-home-news-link-hover-color);
+  }
+}
