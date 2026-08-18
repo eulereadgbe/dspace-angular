@@ -35,26 +35,30 @@
       align-items: center;
       height: var(--ds-header-logo-height);
 
-      /* Fluid font sizing: Min 0.85rem, scales dynamically with viewport, Capped at max 1.25rem */
-      font-size: clamp(0.85rem, 1.2vw + 0.4rem, 1.25rem);
-      line-height: 1.2;
+      /* Adjusted Fluid Font: Minimum size reduced to 0.7rem so "Institutional" fits */
+      font-size: clamp(0.7rem, 1.8vw + 0.2rem, 1.25rem);
+      line-height: 1.15;
 
       /* Keep on single line for tablets & desktop */
       @media (min-width: 576px) {
         white-space: nowrap;
       }
 
-      /* Allow 2-line wrapped text (still centered vertically) for 360px - 575px */
+      /* Allow naturally wrapped text (still centered vertically) for 360px - 575px */
       @media (max-width: 575.98px) and (min-width: 360px) {
         white-space: normal;
-        word-break: break-word;
+        /* Replaced break-word with normal to prevent the "Institution-al" split */
+        word-break: normal;
+        overflow-wrap: normal;
       }
 
       /* --- 359px AND BELOW: Preserved 3-line top-to-bottom spanning layout --- */
       @media (max-width: 359.98px) {
         white-space: normal;
-        word-break: break-word;
-        max-width: 120px;
+        word-break: normal;
+        overflow-wrap: normal;
+        /* Widened max-width slightly to accommodate the longer word */
+        max-width: 140px;
 
         /* Distribute 3 lines evenly from top edge to bottom edge of logo */
         display: inline-flex;
@@ -62,7 +66,8 @@
         justify-content: space-between;
         align-items: flex-start;
 
-        font-size: calc(var(--ds-header-logo-height) * 0.26);
+        /* Slightly scaled down to account for the wider text block */
+        font-size: calc(var(--ds-header-logo-height) * 0.24);
         line-height: 1.1;
       }
     }
