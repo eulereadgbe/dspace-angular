@@ -2122,6 +2122,8 @@
 
   "home.title": "Home",
 
+  "home.description": "DSpace is an open source repository for publishing and preserving digital content.",
+
   "home.top-level-communities.head": "Communities in DSpace",
 
   "home.top-level-communities.help": "Select a community to browse its collections.",

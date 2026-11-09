@@ -12,6 +12,7 @@ export const ROUTES: Route[] = [
     pathMatch: 'full',
     data: {
       title: 'home.title',
+      description: 'home.description',
       menu: {
         public: [{
           id: 'statistics_site',
