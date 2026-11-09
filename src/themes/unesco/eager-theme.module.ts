@@ -8,6 +8,7 @@ import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-na
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
+import { ItemSearchResultListElementComponent } from './app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component';
 import { ThumbnailComponent } from './app/thumbnail/thumbnail.component';
 
 /**
@@ -16,6 +17,7 @@ import { ThumbnailComponent } from './app/thumbnail/thumbnail.component';
  */
 const ENTRY_COMPONENTS = [
   UntypedItemComponent,
+  ItemSearchResultListElementComponent,
 ];
 
 const DECLARATIONS = [

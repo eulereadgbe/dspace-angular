@@ -31,7 +31,8 @@ import { DsoEditMenuComponent } from '../../../../../../../app/shared/dso-page/d
 import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
-import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
+// eslint-disable-next-line dspace-angular-ts/themed-component-usages -- use the unesco thumbnail directly: the core wrapper does not forward [item]
+import { ThumbnailComponent } from '../../../../thumbnail/thumbnail.component';
 import { ItemPageSdgFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/sdg/item-page-sdg-field.component';
 import { ItemPageMetadataSearchLinkFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/metadata-search-link/item-page-metadata-search-link-field.component';
 import { ItemPageOdcFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/odc/item-page-odc-field.component';
@@ -61,7 +62,8 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
     ThemedItemPageTitleFieldComponent,
     DsoEditMenuComponent,
     MetadataFieldWrapperComponent,
-    ThemedThumbnailComponent,
+    // eslint-disable-next-line dspace-angular-ts/themed-component-usages
+    ThumbnailComponent,
     ThemedMediaViewerComponent,
     ThemedFileSectionComponent,
     ItemPageDateFieldComponent,

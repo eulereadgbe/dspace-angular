@@ -1,0 +1,34 @@
+<ng-container *ngVar="mediaList$ | async as mediaList">
+  <ds-loading
+    *ngIf="isLoading"
+    message="{{ 'loading.default' | translate }}"
+    [showMessage]="false"
+  ></ds-loading>
+  <div class="media-viewer" *ngIf="!isLoading">
+    <ng-container *ngIf="mediaList.length > 0; else showThumbnail">
+      <ng-container *ngVar="mediaOptions.video && ['audio', 'video'].includes(mediaList[0]?.format) as showVideo">
+        <ng-container *ngVar="mediaOptions.image && mediaList[0]?.format === 'image' as showImage">
+          <ds-media-viewer-video *ngIf="showVideo" [medias]="mediaList" [captions]="captions$ | async"></ds-media-viewer-video>
+          <ds-media-viewer-image *ngIf="showImage" [images]="mediaList"></ds-media-viewer-image>
+          <ng-container *ngIf="showImage || showVideo; else showThumbnail"></ng-container>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+  <ng-template #showThumbnail>
+    <ng-container *ngIf="(thumbnailsRD$ | async) as thumbnailsRD">
+      <ng-container *ngVar="thumbnailsRD?.payload?.page[0] as thumbnail">
+        <!-- image gallery mode, item has a thumbnail: unchanged -->
+        <ds-media-viewer-image *ngIf="mediaOptions.image && mediaOptions.video && thumbnail"
+          [image]="thumbnail._links.content.href"
+          [preview]="false"
+        ></ds-media-viewer-image>
+        <!-- otherwise: thumbnail, or a cover generated from the item's metadata -->
+        <!-- eslint-disable-next-line dspace-angular-html/themed-component-usages -- the core ds-thumbnail wrapper does not forward [item] -->
+        <ds-themed-thumbnail *ngIf="!(mediaOptions.image && mediaOptions.video && thumbnail)"
+                             [thumbnail]="thumbnail" [item]="item">
+        </ds-themed-thumbnail>
+      </ng-container>
+    </ng-container>
+  </ng-template>
+</ng-container>
