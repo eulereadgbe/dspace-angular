@@ -1,0 +1,9 @@
+{
+  // DSpace default: "All of DSpace"
+  "menu.section.browse_global": "Browse ATESEA IR",
+
+  // DSpace default: "DSpace Angular :: "
+  "repository.title.prefix": "ATESEA IR :: ",
+  "item.page.view-download": "View/Download",
+  "item.page.view-download.tooltip": "External link to view/download"
+}
